@@ -52,7 +52,33 @@ console.log(programmingLanguage.length); // Length property
 //  In the commented section, write down which type you think each variable is. 
 // Check your answers by printing the types to the console.
 
-let length = 16.78; // your answer goes here
-let lastName = "Johnson"; // 
-let car = ""; //
-let isOpen = true; //
+let length = 16.78; // number
+let lastName = "Johnson"; // string
+let car = ""; // string
+let isOpen = true; // boolean
+console.log(typeof length, typeof lastName, typeof car, typeof isOpen); // checking the types
+
+// 2. Declare two variables called ageMark and ageJohn. Assign their ages - 
+// one age should be assigned as a string, the other as a number. 
+// Print the variables' data types to the console.
+let ageMark = 22; // number
+let ageJohn = "39"; // string 
+console.log(typeof ageMark);
+console.log(typeof ageJohn);
+
+// Is John older than Mark? 
+// Declare a variable with a boolean value and print the following to the console eg. 
+// "John is older than Mark: true" 
+// tip: you can use the ternary operator if you want!
+
+let johnIsOlderThanMark = ageJohn > ageMark; // comparison operator
+
+console.log("john Is Older Than Mark : " + johnIsOlderThanMark);
+
+let ages = (ageMark < ageJohn) ? true : false; // ternary operator 
+console.log("john is older than mark", ages );
+
+// 4. Use let to declare a variable called x. Do not assign a value. Print x's data type to the console.
+// 5. Assign a string to x. Print x's data type again. 
+// 6. Print the last character of x's string to the console.
+// 7. Print the length of x to the console, as well as the data type of x's length.
