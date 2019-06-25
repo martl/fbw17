@@ -61,27 +61,32 @@ switch (iceCreamScoops) {
 // THIRD TASK
 // https://www.goconqr.com/c/59891/course_modules/89631-lottery-num-reorder?=
 // Reorder this drunken code and add curly braces where needed 
-
-case 776:
-standardWinnings = jackpot;
-break;
 var jackpot = 1000;
-standardWinnings = standardWinnings * 2;
-standardWinnings = jackpot / 5;
-default:
-break;
-console.log(`Total Winnings: ${standardWinnings}`);
-else if (randomNumber < 700 || randomNumber >= 800 && randomNumber < 900)
-if (randomNumber < 500)
-standardWinnings = 0;
-else if (randomNumber < 800)
-case 778:
-standardWinnings = standardWinnings * 10;
-break;
-var randomNumber = 93;
-case 777:
+var randomNumber = 800;
 var standardWinnings = 10;
-standardWinnings = standardWinnings * 5;
-else
-standardWinnings = jackpot / 2;
-switch (randomNumber)
+if (randomNumber < 500) {
+    standardWinnings = 0;
+} else if (randomNumber < 700 || (randomNumber >= 800 && randomNumber < 900)) {
+    // 4 + 2 * 3 = 10 // you can leave the brackets out, because && is stronger than || 
+    // 4 + (2 *3) = 10 // plus is weaker than multiply 
+    standardWinnings *= 2;
+} else if (randomNumber < 800) {
+    switch (randomNumber) {
+        case 776:
+            standardWinnings = jackpot / 2;
+            break;
+        case 777:
+            standardWinnings = jackpot;
+            break;
+        case 778:
+            standardWinnings = jackpot / 5;
+            break;
+        default:
+            standardWinnings *= 10;
+    }
+} else {
+    standardWinnings *= 5;
+}
+console.log(`Total Winnings: ${standardWinnings}`);
+
+/// end of the program
