@@ -74,16 +74,17 @@ while (currentNum <= endNum) {
 // currentWeight = weight of boxes
 // constants
 let maxWeight = 10000;
-let currentWeight = 0;
+let currentWeight;
 let index = 1;
 let counter = 0; // loop counter
 // currentWeight is smaller than maxWeight and index smaller or equal to 500
-while (currentWeight < maxWeight && index <= 500) {
+//while (currentWeight < maxWeight && index <= 500) {
+for (currentWeight = 0; currentWeight < maxWeight && index <= 500; index++) {
     let weight = 10; // first case
     if (index > 100 && index <= 200) { // second case
         weight = 20;
         if (index >= 150 && index <= 159) {
-            index++;
+            //index++;
             continue;
         }
     } else if (index > 200 && index <= 250) { // third case
@@ -102,7 +103,7 @@ while (currentWeight < maxWeight && index <= 500) {
         console.log('How many boxes on the boat: ' + counter);
         console.log('MaxWeight: ' + maxWeight);
         console.log('Remaining capacity:' + (maxWeight - currentWeight));
-        index++; // take the next box
+        //index++; // take the next box
     } else {
         break; // stops and exits the while loop 
     }
@@ -135,4 +136,9 @@ while (number <= 100) {
         console.log('continue'); // always skipped!!! normally shouldn't be here°!
     }
     //console.log(number);
+}
+
+// First FOR LOOP
+for (let i = 0; i <= 100; i++) {
+    console.log(i);
 }
