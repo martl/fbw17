@@ -265,25 +265,167 @@ console.log(filterItems(friends1, 'ka')); // ["Rika", "Marika"];
 console.log(filterItems(friends1, 'e')); // ["Alex", "Oliver"];
 // #### 10. Reformat an Array, Given the following array: 
 // Use map, make a new Object. 
-// object = {}; object[key] = value; return object; 
-let originalArray = [{ key: 1, name: "John"},
-                    { key: 2, name: "Maria"},
-                    { key: 3, name: "Oliver"},
-                    { key: 4, name: "Jane"},
-                    { key: 5, name: "Jack"},
-                    { key: 6, name: "Albert"},
-                    { key: 7, name: "Harry"},
-                    { key: 8, name: "Ron"},
-                    { key: 9, name: "Kenneth"},
-                    { key: 10, name: "Kyle"}];
+// object = {}; Creating a new Object
+// object[key] = value; // Add a new Key-Value-Pair
+// object.key = value; // Add a new Key-Value-Pair
+// return object; 
+let originalArray = [{
+        key: 1,
+        name: "John"
+    },
+    {
+        key: 2,
+        name: "Maria"
+    },
+    {
+        key: 3,
+        name: "Oliver"
+    },
+    {
+        key: 4,
+        name: "Jane"
+    },
+    {
+        key: 5,
+        name: "Jack"
+    },
+    {
+        key: 6,
+        name: "Albert"
+    },
+    {
+        key: 7,
+        name: "Harry"
+    },
+    {
+        key: 8,
+        name: "Ron"
+    },
+    {
+        key: 9,
+        name: "Kenneth"
+    },
+    {
+        key: 10,
+        name: "Kyle"
+    }
+];
+console.log(originalArray.map(x => {
+    let newObj = {};
+    newObj[x.key] = x.name;
+    return newObj;
+}));
+
+function reformat(arr) {
+    let newArray = {};
+    arr.map(function (object) {
+        console.log(object);
+        newArray[object.key] = object.name;
+    });
+    return newArray;
+};
+console.log(reformat(originalArray));
 //* Reformat the array as follow: 
-let newArray = [{1: "John"}, 
-                {2: "Maria"}, 
-                {3: "Oliver"}, 
-                {4: "Jane"}, 
-                {5: "Jack"}, 
-                {6: "Albert"}, 
-                {7: "Harry"}, 
-                {8: "Ron"}, 
-                {9: "Kenneth"}, 
-                {10: "Kyle"}];
+/*let newArray = [{
+        1: "John"
+    },
+    {
+        2: "Maria"
+    },
+    {
+        3: "Oliver"
+    },
+    {
+        4: "Jane"
+    },
+    {
+        5: "Jack"
+    },
+    {
+        6: "Albert"
+    },
+    {
+        7: "Harry"
+    },
+    {
+        8: "Ron"
+    },
+    {
+        9: "Kenneth"
+    },
+    {
+        10: "Kyle"
+    }
+];*/
+let newArray2 = originalArray.map(keyValuePairs => {
+    // Empty Object
+    let newObj = {};
+    newObj[keyValuePairs.key] = keyValuePairs.name;
+    return newObj;
+});
+console.log(newArray2);
+
+//#### 11. Sorting Numbers
+//Given the following array of numbers, sort from smallest to largest. 
+let arrayOfIntegers = [4, 200, 90, 30, 12, 75, 21, 3];
+//* Once you are finished, answer the following questions: 
+//**Which method did you use to solve the problem? Why did you have to use this method?** 
+
+function sortArray(arr) {
+    let sortedArray = arr.sort(function (a, b) {
+        return a - b;
+    })
+    return sortedArray;
+}
+console.log(sortArray([4, 200, 90, 30, 12, 75, 21, 3]));
+
+console.log(arrayOfIntegers.sort((a, b) => a - b));
+
+//#### 12. Sort Shapes
+//Given the following array of shapes, complete the task below:
+let shapes = [
+    [5, "Pentagon"],
+    [3, "Triangle"],
+    [8, "Octagon"],
+    [4, "Rectangle"],
+    [6, "Hexagon"],
+    [10, "Decagon"]
+];
+// Sort the 2D array based on the shapes' sides. Sorting should be in ascending order from smaller number to greater number. 
+// USE SORT , two dimensional array!!! 
+
+console.log(shapes.sort((first, second) => first[0] - second[0]));
+
+let newShapes = shapes.sort((a, b) => a[0] > b[0]);
+console.log(newShapes);
+
+function twoDSort(arr) {
+    let twoDSorted = arr.sort(function (a, b) {
+        if (a[0] === b[0]) {
+            return 0;
+        } else {
+            return (a[0] < b[0]) ? -1 : 1;
+        }
+    })
+    return twoDSorted;
+}
+console.log(twoDSort(shapes));
+
+
+console.log(shapes.sort());
+// For the next time i will give you a solution
+console.log(shapes.sort(function(a,b) {
+    if (a[1] > b[1]) {
+        return 1;
+    } else {
+        return -1;
+    }
+}));
+/*[
+    [3, 'Triangle'],
+    [4, 'Rectangle'],
+    [5, 'Pentagon'],
+    [6, 'Hexagon'],
+    [8, 'Octagon'],
+    [10, 'Decagon']
+]*/
