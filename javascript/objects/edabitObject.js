@@ -80,6 +80,10 @@ let paris = {
     continent: "Europe"
 };
 
+// Two different approaches for the same thing
+console.log(paris['name']);
+console.log(paris.name);
+
 let tokyo = {
     name: "Tokyo",
     population: "13,929,286",
@@ -99,7 +103,30 @@ function cityFacts2(city) {
 let cityFacts3 = city => city.name + " has a population of " + city.population + " and is situated in " + city.continent;
 
 // Bracket notation, all solutions are fine :) 
-let cityFacts3 = city => city['name'] + " has a population of " + city['population'] + " and is situated in " + city['continent'];
+let cityFacts4 = city => city['name'] + " has a population of " + city['population'] + " and is situated in " + city['continent'];
 
-console.log(cityFacts3(paris));
-console.log(cityFacts3(tokyo));
+console.log(cityFacts4(paris));
+console.log(cityFacts4(tokyo));
+
+for (let prop in paris) {
+    //console.log(paris.prop) // not working
+    console.log(paris[prop]);
+}
+// very unlikely, but possible 
+const strangeObject = {
+    "hello world": "hi there!", // two words with empty space 
+    "how are you?": "good and you?",
+    123: 'haha', // numbers
+    true: false, // boolean
+    null: NaN, // falsy values
+    $: "dollar" // special characters
+};
+// strangeObject.hello world // error
+console.log(strangeObject["hello world"]); // working.
+console.log(strangeObject["how are you?"]);
+console.log(strangeObject[123]); 
+console.log(strangeObject[true]);
+console.log(strangeObject[null]);
+console.log(strangeObject.$);
+
+// Fallback always possible!!!
