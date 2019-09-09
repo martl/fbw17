@@ -54,3 +54,11 @@ console.log(uniqueSiberian);
 uniqueBengal.printColorFur(uniqueBengal.colorFur);
 uniqueSiberian.printColorFur(uniqueSiberian.colorFur);
 
+console.log(uniqueBengal.hasOwnProperty('age'));
+// true BengalTiger
+console.log(uniqueBengal.hasOwnProperty('colorFur'));
+// true Tiger
+console.log(uniqueBengal.hasOwnProperty('species'));
+// true Animals
+console.log(uniqueBengal.hasOwnProperty('y'));
+// false
