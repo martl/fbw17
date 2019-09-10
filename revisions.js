@@ -1,21 +1,21 @@
-let names = [
-  "Leon",
-  "Karol",
-  "Davide",
-  "Martina",
-  "Virgile",
-  "Bianca",
-  "Maria",
-  "Christophe",
-  "Nic",
-  "Hassan",
-  "Mor",
-  "Givara",
-  "Naima",
-  "Balazs",
-  "Ion",
-  "Moj"
-];
+// let names = [
+//   "Leon",
+//   "Karol",
+//   "Davide",
+//   "Martina",
+//   "Virgile",
+//   "Bianca",
+//   "Maria",
+//   "Christophe",
+//   "Nic",
+//   "Hassan",
+//   "Mor",
+//   "Givara",
+//   "Naima",
+//   "Balazs",
+//   "Ion",
+//   "Moj"
+// ];
 
 // let i = 0;
 
@@ -61,9 +61,21 @@ let names = [
 
 // console.log(namesWithNumber);
 
-//... BUUUUT, Array.prototype.map is much better for doing it
-const namesWithNumber = names.map((name, i) => {
-  return `${i}: ${name}`;
-});
+// //... BUUUUT, Array.prototype.map is much better for doing it
+// const namesWithNumber = names.map((name, i) => {
+//   return `${i}: ${name}`;
+// });
 
-console.log(namesWithNumber);
+// console.log(namesWithNumber);
+
+const profiles = [
+  { firstName: "Robert", lastName: "Ristock" },
+  { firstName: "Martina", lastName: "Freundorfer" },
+  { firstName: "Leon-Arno", lastName: "Rimrod" },
+  { firstName: "Itamar", lastName: "Givon" }
+];
+
+/**
+ * Exercise:
+ * Map the array above into a new array containing just the last names
+ */
