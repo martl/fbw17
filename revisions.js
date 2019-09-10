@@ -79,3 +79,8 @@ const profiles = [
  * Exercise:
  * Map the array above into a new array containing just the last names
  */
+const newArray = profiles.map(person => {
+  return person.lastName;
+});
+
+console.log(newArray);
