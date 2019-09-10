@@ -79,3 +79,11 @@ const profiles = [
  * Exercise:
  * Map the array above into a new array containing just the last names
  */
+
+// VIRGILE WROTE THIS
+
+let gimmeTheLastNamesAndTheLastNamesOnly = (objArr)=> {
+  return objArr.map((obj) => obj.lastName)
+};
+
+console.log(gimmeTheLastNamesAndTheLastNamesOnly(profiles));
