@@ -79,3 +79,9 @@ const profiles = [
  * Exercise:
  * Map the array above into a new array containing just the last names
  */
+var reformMe = profiles.map(obj => {
+  var bojj = {};
+  bojj[obj.firstName] = obj.lastName;
+  return bojj;
+});
+console.log(reformMe);
