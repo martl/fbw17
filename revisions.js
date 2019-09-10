@@ -80,4 +80,4 @@ const profiles = [
  * Map the array above into a new array containing just the last names
  */
 
-profiles.map
+const lastName = 
