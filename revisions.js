@@ -52,11 +52,18 @@ let names = [
 //   console.log(`${i}: ${name}`);
 // });
 
-// forEach can be used to... collect and manipulate array values, into a NEW array
-const namesWithNumber = [];
+// // forEach can be used to... collect and manipulate array values, into a NEW array
+// const namesWithNumber = [];
 
-names.forEach((name, i) => {
-  namesWithNumber.push(`${i}: ${name}`);
+// names.forEach((name, i) => {
+//   namesWithNumber.push(`${i}: ${name}`);
+// });
+
+// console.log(namesWithNumber);
+
+//... BUUUUT, Array.prototype.map is much better for doing it
+const namesWithNumber = names.map((name, i) => {
+  return `${i}: ${name}`;
 });
 
 console.log(namesWithNumber);
