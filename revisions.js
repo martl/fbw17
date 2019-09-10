@@ -79,3 +79,11 @@ const profiles = [
  * Exercise:
  * Map the array above into a new array containing just the last names
  */
+
+
+
+  const lastNamesArray =  profiles.map((object) => {
+      return  object.lastName 
+   } )
+console.log(lastNamesArray)
+
