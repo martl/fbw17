@@ -74,6 +74,9 @@ const profiles = [
   { firstName: "Leon-Arno", lastName: "Rimrod" },
   { firstName: "Itamar", lastName: "Givon" }
 ];
+const getLastName = profiles.map((profile) => profile.lastName );
+
+console.log(getLastName);
 
 /**
  * Exercise:
