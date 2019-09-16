@@ -124,7 +124,7 @@ const studentStrings = classMates.map(member => {
 // ...But Array.prototype.reduce is much better for it
 
 // Exercise: Use reduce to do the exact same thing that we did above.
-let reducedAge = classMates.reduce((total,curr) =>{
-  return total+curr.age;
- },0);
- console.log(reducedAge)
+let reducedAge = classMates.reduce((total, curr) => {
+  return total + curr.age;
+}, 0);
+console.log(reducedAge)
