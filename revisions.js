@@ -101,4 +101,8 @@ const classMates = [
   { firstName: "Karol", lastName: "Polakowski", age: 30 }
 ];
 
-console.log(classMates);
+// console.log(classMates);
+
+const arr = classMates.map(student=> `${student.firstName} ${student.lastName} is ${student.age} years old.` )
+
+console.log(arr);
