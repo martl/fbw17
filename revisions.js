@@ -79,9 +79,59 @@ const profiles = [
  * Exercise:
  * Map the array above into a new array containing just the last names
  */
-var reformMe = profiles.map(obj => {
-  var bojj = {};
-  bojj[obj.firstName] = obj.lastName;
-  return bojj;
+var reformMe = profiles.map(profile => {
+  return profile.lastName
 });
 console.log(reformMe);
+
+const arrayOfStudent = [{
+    name: "Nic",
+    lastName: "Solitom",
+    age: 32
+  },
+  {
+    name: "Naima",
+    lastName: "Adan",
+    age: 28
+  },
+  {
+    name: "Davide",
+    lastName: "De Feudis",
+    age: 30
+  },
+  {
+    name: "Balazs",
+    lastName: "Danyadi",
+    age: 32
+  },
+  {
+    name: "Givara",
+    lastName: "Mahfoud",
+    age: 25
+  },
+  {
+    name: "Mojgan",
+    lastName: "vafa",
+    age: 23
+  },
+  {
+    name: "Lon",
+    lastName: "Lazarev",
+    age: 30
+  },
+  {
+    name: "Maria",
+    lastName: "Nanakou",
+    age: 40
+  },
+  {
+    name: "Karol",
+    lastName: "polakowski",
+    age: 30
+  }
+]
+
+const newArray = arrayOfStudent.map((student) => {
+  return `${student.name} ${student.lastName} is ${student.age} years old.`;
+})
+console.log(newArray);
