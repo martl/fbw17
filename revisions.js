@@ -68,12 +68,12 @@
 
 // console.log(namesWithNumber);
 
-// const profiles = [
-//   { firstName: "Robert", lastName: "Ristock" },
-//   { firstName: "Martina", lastName: "Freundorfer" },
-//   { firstName: "Leon-Arno", lastName: "Rimrod" },
-//   { firstName: "Itamar", lastName: "Givon" }
-// ];
+const profiles = [
+  { firstName: "Robert", lastName: "Ristock" },
+  { firstName: "Martina", lastName: "Freundorfer" },
+  { firstName: "Leon-Arno", lastName: "Rimrod" },
+  { firstName: "Itamar", lastName: "Givon" }
+];
 
 /**
  * Exercise:
@@ -115,3 +115,5 @@ console.log(sentences);
 // ...But Array.prototype.reduce is much better for it
 
 // Exercise: Use reduce to do the exact same thing that we did above.
+let sumWithReduce = students.reduce((total,student) => total+student.age,0);
+console.log(sumWithReduce);
