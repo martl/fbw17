@@ -93,17 +93,25 @@ const profiles = [
    {firstName: "Davide", lastName: "De Feudis", age: 35},
    {firstName: "Balazs", lastName: "Danyadi", age: 33},
    {firstName: "Givara", lastName: "Mahfoud", age : 25},
-   {firstName: "Maria" lastName: "Nanakou" age: 40},
-   {firstName: "Mojgan" lastName: "Vafa" age: 26},
-   {firstName: "Ion" lastName: "Lazarev" age: 30},
-   {firstName: "Christophe" lastName: "Troudart" age: 23},
-   {firstName: "Karol" lastName: "Polakowski", age: 30}
- };
+   {firstName: "Maria", lastName: "Nanakou", age: 40},
+   {firstName: "Mojgan", lastName: "Vafa", age: 26},
+   {firstName: "Ion", lastName: "Lazarev", age: 30},
+   {firstName: "Christophe", lastName: "Troudart", age: 23},
+   {firstName: "Karol", lastName: "Polakowski", age: 30}
+ ];
+
+// const createSentence = classMembers.map((member, i) => {
+//   return ${classMembers.firstName} ${classMembers.lastName} is ${classMembers.age} years old.`
+  
+// }); 
+
+const createSentence = [];
+
+classMembers.forEach((member, i) => {
+  createSentence.push(`${member.firstName} ${member.lastName} is ${member.age} years old.`);
+});
 
 
- 
 
 
-
-
- ]
+console.log(createSentence)
