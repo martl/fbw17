@@ -82,9 +82,11 @@ const people = [
   { firstName: "Karol", lastName: "Polakowski", age: 28 },
 
 ];
-const getFirstName = people.map((name) => `${name.firstName} ${name.lastName} is ${name.age} years old`)
+ const sum = people.reduce((total,sum) => total + sum.age, 0 );
+ console.log(sum)
 
-console.log(getFirstName)
+
+
 /**
  * Exercise:
  * Map the array above into a new array containing just the last names
