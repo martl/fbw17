@@ -104,11 +104,11 @@ const classMates = [
   { firstName: "Hassan", lastName: "Abu Shawish", age: 34 }
 ];
 
-// Create a new array of strings. The string should follow the pattern below:
-// Nic Solitom is 32 years old.
-const studentStrings = classMates.map(member => {
-  return `${member.firstName} ${member.lastName} is ${member.age} years old`;
-});
+// // Create a new array of strings. The string should follow the pattern below:
+// // Nic Solitom is 32 years old.
+// const studentStrings = classMates.map(member => {
+//   return `${member.firstName} ${member.lastName} is ${member.age} years old`;
+// });
 
 // console.log(studentStrings);
 
@@ -119,12 +119,25 @@ const studentStrings = classMates.map(member => {
 //   sum += student.age; // sum = sum + student.age
 // });
 
-// console.log(sum); // -> 150
+// console.log(sum); // -> 367
 
 // ...But Array.prototype.reduce is much better for it
 
 // Exercise: Use reduce to do the exact same thing that we did above.
-let reducedAge = classMates.reduce((total, curr) => {
-  return total + curr.age;
+
+const ageSum = classMates.reduce((sum, student) => {
+  return sum + student.age;
 }, 0);
-console.log(reducedAge)
+
+console.log(ageSum); // -> 367
+
+// Exercise: Reduce the classMates array to a boolean that indicates whether there is an object with the firstName Mojgan is in it.
+
+const reduceMojgan = classMates.reduce((sum, student) => {
+  if (student.firstName === "Mojgan")
+    return student;
+  return sum ? true : false;
+
+}, false)
+
+console.log(reduceMojgan)
