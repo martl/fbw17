@@ -81,3 +81,19 @@ const profiles = [
  */
 const lastNamesArray = profiles.map( person => person.lastName );
 console.log(lastNamesArray);
+
+
+let students = [
+  { firstName: "Karol", lastName: "Polakowski", age: 30 },
+  { firstName: "Davide", lastName: "De Feudis", age: 35 },
+  { firstName: "Maria", lastName: "Nanakou", age: 40 },
+  { firstName: "Nic", lastName: "Solitom", age: 32 },
+  { firstName: "Christophe", lastName: "Troudart", age: 23 },
+  { firstName: "Balazs", lastName: "Danyadi", age: 33 },
+  { firstName: "Naima", lastName: "Adan Ahmed", age: 29 },
+  { firstName: "Givara", lastName: "Mahfoud", age: 25 },
+  { firstName: "Mojgan", lastName: "Vafa", age: 18 },
+  { firstName: "Ion", lastName: "Lazarev", age: 30 },
+  { firstName: "Leon-Arno", lastName: "Rimrod", age: 30 },
+  { firstName: "Itamar", lastName: "Givon", age: 35 }
+];
