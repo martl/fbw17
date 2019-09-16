@@ -84,42 +84,68 @@
 // });
 // console.log(profilesLastNames);
 
-const classMates = [
-  { firstName: "Nic", lastName: "Solitom", age: 32 },
-  { firstName: "Naima", lastName: "Adan Ahmed", age: 29 },
-  { firstName: "Davide", lastName: "de Feudis", age: 35 },
-  { firstName: "Balazs", lastName: "Danyadi", age: 33 },
-  { firstName: "Givara", lastName: "Mahfoud", age: 25 },
-  { firstName: "Maria", lastName: "Nanakou", age: 40 },
-  { firstName: "Mojgan", lastName: "Vafa", age: 23 },
-  { firstName: "Ion", lastName: "Lazarev", age: 30 },
-  { firstName: "Christophe", lastName: "Troudart", age: 23 },
-  { firstName: "Karol", lastName: "Polakowski", age: 30 },
-  { firstName: "Bianca", lastName: "Richa", age: 33 },
-  { firstName: "Hassan", lastName: "Abu Shawish", age: 34 }
+
+
+const classMates = [{
+    firstName: "Nic",
+    lastName: "Solitom",
+    age: 32
+  },
+  {
+    firstName: "Naima",
+    lastName: "Adan Ahmed",
+    age: 29
+  },
+  {
+    firstName: "Davide",
+    lastName: "de Feudis",
+    age: 35
+  },
+  {
+    firstName: "Balazs",
+    lastName: "Danyadi",
+    age: 33
+  },
+  {
+    firstName: "Givara",
+    lastName: "Mahfoud",
+    age: 25
+  },
+  {
+    firstName: "Maria",
+    lastName: "Nanakou",
+    age: 40
+  },
+  {
+    firstName: "Mojgan",
+    lastName: "Vafa",
+    age: 23
+  },
+  {
+    firstName: "Ion",
+    lastName: "Lazarev",
+    age: 30
+  },
+  {
+    firstName: "Christophe",
+    lastName: "Troudart",
+    age: 23
+  },
+  {
+    firstName: "Karol",
+    lastName: "Polakowski",
+    age: 30
+  }
 ];
 
-// Create a new array of strings. The string should follow the pattern below:
-// Nic Solitom is 32 years old.
-const studentStrings = classMates.map(member => {
-  return `${member.firstName} ${member.lastName} is ${member.age} years old`;
-});
+// console.log(classMates);
 
-// console.log(studentStrings);
+const arr = classMates.map(student => `${student.firstName} ${student.lastName} is ${student.age} years old.`)
 
-//// To get a single value out of an arry we can use a forEach...
-// let sum = 0; // Accumulator
-
-// classMates.forEach(student => {
-//   sum += student.age; // sum = sum + student.age
-// });
-
-// console.log(sum); // -> 150
-
-// ...But Array.prototype.reduce is much better for it
-
-// Exercise: Use reduce to do the exact same thing that we did above.
+// console.log(arr);
 
 console.log(classMates.reduce((acc, student) => {
   return  acc + student.age;
 }, 0));
+
+
