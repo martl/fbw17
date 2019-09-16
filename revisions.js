@@ -87,19 +87,31 @@
 let students = [
   { firstName: "Nic", lastName: "Solitom", age: 32 },
   { firstName: "Naima", lastName: "Adan Ahmed", age: 29 },
-  { firstName: "Davide", lastName: "De Feudis", age: 21 },
+  { firstName: "Davide", lastName: "De Feudis", age: 35 },
   { firstName: "Balazs", lastName: "Danyadi", age: 33 },
   { firstName: "Givara", lastName: "Mahfoud", age: 25 },
   { firstName: "Maria", lastName: "Nanakou", age: 40 },
   { firstName: "Mojgan", lastName: "Vafa", age: 23 },
   { firstName: "Ion", lastName: "Lazarev", age: 30 },
   { firstName: "Christophe", lastName: "Troudart", age: 23 },
-  { firstName: "Karol", lastName: "Polakowski", age: 30 }
+  { firstName: "Karol", lastName: "Polakowski", age: 30 },
+  { firstName: "Bianca", lastName:"Richa", age: 33},
+  { firstName: "Hasan", lastName: "Abu Shawish", age: 34}
 ]
 
-const studentsStrings = students.map((student) => {
+const studentsStrings = students.map(student => {
   return `${student.firstName} ${student.lastName} is ${student.age} years old`
-
 });
+console.log(studentsStrings);
 
-console.log(studentsStrings)
+//to get a single value out of an array we can use forEach()
+let sum = 0;
+students.forEach(student =>{
+return sum +=student.age ;
+});
+console.log(sum)
+//but Array.prototype.reduce its much better
+
+students.reduce((total,curr) =>{
+ console.log (total+=curr)
+},0)
