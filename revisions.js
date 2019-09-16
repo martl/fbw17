@@ -101,3 +101,5 @@ const studentArray = [
 {  firstName: "Karol", lastName: "Polakowski", age: 30}
 ];
 console.log(studentArray);
+
+const lastNames = studentArray.map(lastName)
