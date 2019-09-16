@@ -128,16 +128,20 @@ const classMates = [
 const ageSum = classMates.reduce((sum, student) => {
   return sum + student.age;
 }, 0);
-
 console.log(ageSum); // -> 367
 
 // Exercise: Reduce the classMates array to a boolean that indicates whether there is an object with the firstName Mojgan is in it.
 
-const reduceMojgan = classMates.reduce((sum, student) => {
+const wheresMojgan = classMates.reduce((hasMojgan, student) => {
   if (student.firstName === "Mojgan")
     return student;
-  return sum ? true : false;
+  return hasMojgan ? true : false;
+}, false);
+console.log(wheresMojgan)
 
-}, false)
+//includes
 
-console.log(reduceMojgan)
+const isMojganHere  = classMates.map(student =>{
+  return student.firstName;
+}).includes("Mojgan");
+console.log(isMojganHere)
