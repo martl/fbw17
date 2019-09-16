@@ -112,6 +112,7 @@ return sum +=student.age ;
 console.log(sum)
 //but Array.prototype.reduce its much better
 
-students.reduce((total,curr) =>{
- console.log (total+=curr)
-},0)
+let reducedAge = students.reduce((total,curr) =>{
+ return total+curr.age;
+},0);
+console.log(reducedAge)
