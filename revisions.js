@@ -147,3 +147,10 @@ const studentStrings = classMates.map(member => {
 // ...But Array.prototype.reduce is much better for it
 
 // Exercise: Use reduce to do the exact same thing that we did above.
+
+// But Array.prototype.reduce is much better for it:
+
+const reducedAge = classMates.reduce(function(accumulator, currentValue) {
+  return accumulator + currentValue.age;
+},0);
+console.log(reducedAge);
