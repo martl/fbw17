@@ -75,6 +75,7 @@
 //   { firstName: "Itamar", lastName: "Givon" }
 // ];
 
+
 /**
  * Exercise:
  * Map the array above into a new array containing just the last names
@@ -83,7 +84,6 @@
 //   return `${profile.lastName}`;
 // });
 // console.log(profilesLastNames);
-
 
 
 
@@ -101,4 +101,11 @@ const classMates = [
   { firstName: "Karol", lastName: "Polakowski", age: 30 }
 ];
 
-console.log(classMates);
+// Create a new array of strings. The strings should follow the pattern below:
+// Nic Solitom is 32 years old.
+
+const classMatesArrayOfStrings = classMates.map((name) => {
+  return `${name.firstName} ${name.lastName} is ${name.age} years old`;
+});
+
+console.log(classMatesArrayOfStrings);
