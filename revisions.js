@@ -144,5 +144,7 @@ const isMojganHere = classMates
 
 console.log(isMojganHere);
 
+// Bonus challange: Fin a way to achieve the same thing as above, but without using reduce, map or includes (or a for, forEach and while), MDN is your friend here...
+
 // Exercise: Reduce the array of students into a string of first name and age separated by commas. Ex: Nic is 32, Naima is 29...
 // Do this same task in *TWO* different ways
