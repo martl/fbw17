@@ -213,3 +213,6 @@ const classMates = [{
 
 
 
+
+// Exercise: Reduce the array of students int a a string of first nam and age seperated by commas. Ex: Nic is 32, Naime is 29...
+// Do this same task in *TWO* different ways
