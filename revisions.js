@@ -127,3 +127,11 @@ let sumWithReduce = students.reduce(
 console.log(sumWithReduce);
 
 // Exercise: Reduce the classMates array to a boolean that indicates whether there is an object with the firstName Mojgan is in it.
+let isNameInArray = students.reduce((result,student)=>{
+  if(student.firstName==="Ion"){
+    return true;
+  } else {
+    return result;
+  }
+},false)
+console.log(isNameInArray);
