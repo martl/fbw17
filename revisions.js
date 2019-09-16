@@ -84,10 +84,6 @@
 // });
 // console.log(profilesLastNames);
 
-
-
-
-
 const classMates = [
   { firstName: "Nic", lastName: "Solitom", age: 32 },
   { firstName: "Naima", lastName: "Adan Ahmed", age: 29 },
@@ -101,4 +97,5 @@ const classMates = [
   { firstName: "Karol", lastName: "Polakowski", age: 30 }
 ];
 
-console.log(classMates);
+// Create a new array of strings. The string should follow the pattern below:
+// Nic Solitom is 32 years old.
