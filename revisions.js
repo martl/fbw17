@@ -82,7 +82,12 @@ const people = [
   { firstName: "Karol", lastName: "Polakowski", age: 28 },
 
 ];
- const sum = people.reduce((total,sum) => total + sum.age, 0 );
+
+
+const sum = people.reduce(function(total,sum){
+  return (total + sum.age) 
+}, 0);
+/* const sum = people.reduce((total,sum) => total + sum.age, 0 ); */
  console.log(sum)
 
 
