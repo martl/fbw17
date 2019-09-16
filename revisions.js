@@ -150,7 +150,12 @@ const studentStrings = classMates.map(member => {
 
 // But Array.prototype.reduce is much better for it:
 
-const reducedAge = classMates.reduce(function(accumulator, currentValue) {
+const reducedAge = classMates.reduce(function (accumulator, currentValue) {
   return accumulator + currentValue.age;
-},0);
+}, 0);
 console.log(reducedAge);
+
+// And as Arrow function:
+const reducedAgeArrowFunction = classMates.reduce((accumulator, currentValue) => accumulator + currentValue.age,0);
+
+console.log(reducedAgeArrowFunction);
