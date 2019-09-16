@@ -89,17 +89,17 @@ const profiles = [
 
  const classMembers = [
    {firstName: "Nic", lastName: "Solitom", age:32},
-   {firstName: "Naima", lastName: "Ahmed", age: 29 },
-   {firstName: "Davide", lastName: "De Feudis", age: 35},
-   {firstName: "Balazs", lastName: "Danyadi", age: 33},
-   {firstName: "Givara", lastName: "Mahfoud", age : 25},
-   {firstName: "Maria", lastName: "Nanakou", age: 40},
-   {firstName: "Mojgan", lastName: "Vafa", age: 26},
-   {firstName: "Ion", lastName: "Lazarev", age: 30},
-   {firstName: "Christophe", lastName: "Troudart", age: 23},
-   {firstName: "Karol", lastName: "Polakowski", age: 30},
-   {firstName: "Bianca", lastName: "Richa", age: 33},
-   {firstNAme: "Hassan", lastName: "Abu Shawish", age: 34  },
+   {firstName: "Naima", lastName: "Ahmed", age:29 },
+   {firstName: "Davide", lastName: "De Feudis", age:35},
+   {firstName: "Balazs", lastName: "Danyadi", age:33},
+   {firstName: "Givara", lastName: "Mahfoud", age:25},
+   {firstName: "Maria", lastName: "Nanakou", age:40},
+   {firstName: "Mojgan", lastName: "Vafa", age:26},
+   {firstName: "Ion", lastName: "Lazarev", age:30},
+   {firstName: "Christophe", lastName: "Troudart", age:23},
+   {firstName: "Karol", lastName: "Polakowski", age:30},
+   {firstName: "Bianca", lastName: "Richa", age:33},
+   {firstName: "Hassan", lastName: "Abu Shawish", age:34},
  ];
 
 // const createSentence = classMembers.map((member, i) => {
@@ -116,13 +116,15 @@ console.log(createSentence)
 
 
 let sum = 0;
-// classMembers.forEach((student) => {
-// sum =+ student.age;
+classMembers.forEach((student) => {
+sum =+ student.age;
  
-// });
+});
+
+console.log(sum)
 
 const agesSum = classMembers.reduce((total, currValue) => {
   return total + currValue.age
-}, sum)
+}, 0)
 
 console.log(agesSum)
