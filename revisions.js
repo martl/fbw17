@@ -161,7 +161,7 @@ const reducedAge = classMates.reduce(function (accumulator, currentValue) {
 console.log(reducedAge);
 
 // And as Arrow function:
-const reducedAgeArrowFunction = classMates.reduce((accumulator, currentValue) => accumulator + currentValue.age,0);
+const reducedAgeArrowFunction = classMates.reduce((accumulator, currentValue) => accumulator + currentValue.age, 0);
 
 console.log(reducedAgeArrowFunction);
 const ageSum = classMates.reduce((sum, student) => {
@@ -171,3 +171,12 @@ const ageSum = classMates.reduce((sum, student) => {
 console.log(ageSum); // -> 367
 
 // Exercise: Reduce the classMates array to a boolean that indicates whether there is an object with the firstName Mojgan is in it.
+
+
+const checkForName = classMates.reduce((sum, student) => {
+  if (student.firstName === "Mojgan") {
+    return true;
+  };
+  return sum;
+}, false);
+console.log(checkForName);
