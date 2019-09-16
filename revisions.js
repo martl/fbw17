@@ -173,16 +173,28 @@ console.log(ageSum); // -> 367
 // Exercise: Reduce the classMates array to a boolean that indicates whether there is an object with the firstName Mojgan is in it.
 
 
-const checkForName = classMates.reduce((sum, student) => {
-  if (student.firstName === "Mojgan") {
-    return true;
-  };
-  return sum;
-}, false);
-console.log(checkForName);
+// const checkForName = classMates.reduce((sum, student) => {
+//   if (student.firstName === "Mojgan") {
+//     return true;
+//   };
+//   return sum;
+// }, false);
+// console.log(checkForName);
 
-// Itamar's solution:
-const wheresMojgan = classMates.reduce((hasMojgan, student) => {
-  return hasMojgan || student.firstName === "Mojgan";
-}, false);
-console.log(wheresMojgan);
+// // Itamar's solution:
+// const wheresMojgan = classMates.reduce((hasMojgan, student) => {
+//   return hasMojgan || student.firstName === "Mojgan";
+// }, false);
+// console.log(wheresMojgan);
+
+
+// ... Buuut, Array.prototype.includes is much better at it:
+
+const isMojganHere = classMates
+.map((student) => {
+  return student.firstName;
+})
+.includes("Mojgan");
+
+console.log(isMojganHere);
+
