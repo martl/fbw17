@@ -140,12 +140,16 @@ const classMates = [{
 
 // console.log(classMates);
 
-const arr = classMates.map(student => `${student.firstName} ${student.lastName} is ${student.age} years old.`)
+// const arr = classMates.map(student => `${student.firstName} ${student.lastName} is ${student.age} years old.`)
 
 // console.log(arr);
 
-console.log(classMates.reduce((acc, student) => {
-  return  acc + student.age;
-}, 0));
+// console.log(classMates.reduce((acc, student) => {
+//   return  acc + student.age;
+// }, 0));
 
 
+// const sum = classMates.reduce((total, sum) => total + sum.age, 0);
+// console.log(sum)
+
+const a = classMates.reduce((a, student)=> )
