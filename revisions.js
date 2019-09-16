@@ -97,3 +97,8 @@ let students = [
   { firstName: "Leon-Arno", lastName: "Rimrod", age: 30 },
   { firstName: "Itamar", lastName: "Givon", age: 35 }
 ];
+
+let sentences = students.map(student =>{
+  return `${student.firstName} ${student.lastName} is ${student.age} years old`
+});
+console.log(sentences);
