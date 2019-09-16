@@ -75,6 +75,11 @@
 //   { firstName: "Itamar", lastName: "Givon" }
 // ];
 
+// const justNames = profiles.map((person)=>{
+//   return person.lastName
+// });
+// console.log(justNames);
+
 /**
  * Exercise:
  * Map the array above into a new array containing just the last names
@@ -119,3 +124,7 @@ const studentStrings = classMates.map(member => {
 // ...But Array.prototype.reduce is much better for it
 
 // Exercise: Use reduce to do the exact same thing that we did above.
+let reducedAge = classMates.reduce((total, curr) => {
+  return total + curr.age;
+}, 0);
+console.log(reducedAge)
