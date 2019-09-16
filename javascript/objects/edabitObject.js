@@ -39,7 +39,10 @@ console.log(
         length: 5,
         height: 1
     }));
+<<<<<<< HEAD
+=======
 
+>>>>>>> 1e054864ee599aecd63405a44b781f31c45b67b3
 console.log(volumeOfBox5({
     width: 4,
     length: 2,
@@ -52,6 +55,33 @@ console.log(volumeOfBox5({
     height: 5
 }));
 
+<<<<<<< HEAD
+
+// Create a function that takes an object as an argument and returns a string with facts about the city. The city facts will need to be extracted from the object's three properties:
+
+//     name
+//     population
+//     continent
+
+// The string should have the following format: X has a population of Y and is situated in Z (where X is the city name, Y is the population and Z is the continent the city is situated in).
+
+// cityFacts({
+//     name: "Paris",
+//     population: "2,140,526",
+//     continent: "Europe"
+//   }) ➞ "Paris has a population of 2,140,526 and is situated in Europe"
+
+let cityFacts = {
+    name: "Paris",
+    population: "2,140,526",
+    continent: "Europe"
+}
+
+function cityFacts2(city){
+    console.log(city.name +" has a population of " + city.population + " and is situated in" + city.continent);
+}
+cityFacts2(cityFacts)
+=======
 /* Extract City Facts
 https://edabit.com/challenge/FzDAgSR84zeyRa278
 Create a function that takes an object as an argument and returns a string with facts about the city. The city facts will need to be extracted from the object's three properties:
@@ -130,3 +160,4 @@ console.log(strangeObject[null]);
 console.log(strangeObject.$);
 
 // Fallback always possible!!!
+>>>>>>> 1e054864ee599aecd63405a44b781f31c45b67b3
