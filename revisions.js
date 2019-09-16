@@ -99,25 +99,40 @@
 
 //     console.log(newProfiles)
 
+let classmates = [
+  { firstName: "Naima", lastName: "Adan Ahmed", Age: 29 },
+  { firstName: "Balazs", lastName: "Danyadi", Age: 33 },
+  { firstName: "Givara", lastName: "Mahfoud", Age: 25 },
+  { firstName: "Ion", lastName: "Lazarev", Age: 31 },
+  { firstName: "Nic", lastName: "Solitom", Age: 33 },
+  { firstName: "Mojgan", lastName: "Vafa", Age: 45 },
+  { firstName: "Hamida", lastName: "Shinri", Age: 29 },
+  { firstName: "Karol", lastName: "Polakowski", Age: 29 },
+  { firstName: "Christophe", lastName: "Troudart", Age: 29 },
+  { firstName: "Emma", lastName: "Blabla", Age: 29 },
+  { firstName: "Bianca", lastName: "Richa", Age: 33 }
+];
 
-    let classmates = [
-      {firstName: "Naima", lastName: "Adan Ahmed" , Age: 29},
-      {firstName: "Balazs", lastName: "Danyadi" , Age: 33},
-      {firstName: "Givara", lastName: "Mahfoud" , Age: 25},
-      {firstName: "Ion", lastName: "Lazarev" , Age: 31},
-      {firstName: "Nic", lastName: "Solitom" , Age: 33},
-      {firstName: "Mojgan", lastName: "Vafa" , Age: 45},
-      {firstName: "Hamida", lastName: "Shinri" , Age: 29},
-      {firstName: "Karol", lastName: "Polakowski" , Age: 29},
-      {firstName: "Christophe", lastName: "Troudart" , Age: 29},
-      {firstName: "Emma", lastName: "Blabla" , Age: 29},
-      
-    ]
+console.log(classmates);
 
-    console.log(classmates)
+// const newClassmates = classmates.map(classmates => {
+//   return `${classmates.firstName}  ${classmates.lastName} is ${classmates.Age} years old`;})
+
+//   console.log(newClassmates)
+
+//   let sum = 0;
+//   classmates.forEach(classmates => {
+//     sum += classmates.Age;
+//   })
+
+//   console.log(sum)
 
 
-    const newClassmates = classmates.map(classmates => {
-      return `${classmates.firstName}  ${classmates.lastName} is ${classmates.Age} years old`;})
-      
-      console.log(newClassmates)
+
+const totalAge = classmates.reduce(function(accumulator, n){
+  return accumulator + n.Age;
+},0)
+
+console.log(totalAge)
+
+
