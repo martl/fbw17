@@ -129,10 +129,48 @@ console.log(classmates);
 
 
 
-const totalAge = classmates.reduce(function(accumulator, n){
-  return accumulator + n.Age;
-},0)
+// const totalAge = classmates.reduce ((accumulator, object) =>{
+//   return accumulator + object.Age;
+// },0)
 
-console.log(totalAge)
+// console.log(totalAge)
 
+
+
+
+// Exercise: Reduce the classMates array to a boolean that indicates whether there is an object with the firstName Mojgan is in it.
+
+// We can use a reducer to check if a value is in an array...
+// const wheresMojgan = classMates.reduce((hasMojgan, student) => {
+//   return hasMojgan || student.firstName === "Mojgan";
+// }, false);
+
+// console.log(wheresMojgan);
+
+// ... Buuuut, Array.prototype.includes is much better at it
+const isMojganHere = classmates
+  .map(student => {
+    return student.firstName;
+  })
+  .includes("Mojgan");
+
+console.log(isMojganHere);
+
+// Exercise: Reduce the array of students int a a string of first nam and age seperated by commas. Ex: Nic is 32, Naime is 29...
+// Do this same task in *TWO* different ways
+
+const sentences = classmates.reduce((acc,student)=>{
+  return `${acc} ${student.firstName}  is ${student.Age}.`;
+},"")
+
+console.log(sentences)
+
+
+
+
+const anotherSentence = classmates.map((students)=>{
+  return `${students.firstName} is ${students.Age}.`
+});
+
+console.log(anotherSentence)
 
