@@ -163,7 +163,10 @@ const studentStrings = classMates.map(member => {
 
 // Exercise: Use reduce to do the exact same thing that we did above.
 
+//Solution 1
 let reduceAgeStudent = classMates.reduce(function(accumulator, currentValue){ 
 return accumulator + currentValue.age;
 },0);
 console.log(reduceAgeStudent);
+
+
