@@ -97,7 +97,9 @@ const profiles = [
    {firstName: "Mojgan", lastName: "Vafa", age: 26},
    {firstName: "Ion", lastName: "Lazarev", age: 30},
    {firstName: "Christophe", lastName: "Troudart", age: 23},
-   {firstName: "Karol", lastName: "Polakowski", age: 30}
+   {firstName: "Karol", lastName: "Polakowski", age: 30},
+   {firstName: "Bianca", lastName: "Richa", age: 33},
+   {firstNAme: "Hassan", lastName: "Abu Shawish", age: 34  },
  ];
 
 // const createSentence = classMembers.map((member, i) => {
@@ -110,8 +112,17 @@ const createSentence = [];
 classMembers.forEach((member, i) => {
   createSentence.push(`${member.firstName} ${member.lastName} is ${member.age} years old.`);
 });
-
-
-
-
 console.log(createSentence)
+
+
+let sum = 0;
+// classMembers.forEach((student) => {
+// sum =+ student.age;
+ 
+// });
+
+const agesSum = classMembers.reduce((total, currValue) => {
+  return total + currValue.age
+}, sum)
+
+console.log(agesSum)
