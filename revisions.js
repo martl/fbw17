@@ -119,3 +119,7 @@ const studentStrings = classMates.map(member => {
 // ...But Array.prototype.reduce is much better for it
 
 // Exercise: Use reduce to do the exact same thing that we did above.
+
+console.log(classMates.reduce((acc, student) => {
+  return  acc + student.age;
+}, 0));
