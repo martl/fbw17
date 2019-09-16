@@ -88,21 +88,66 @@
 
 
 
-const classMates = [
-  { firstName: "Nic", lastName: "Solitom", age: 32 },
-  { firstName: "Naima", lastName: "Adan Ahmed", age: 29 },
-  { firstName: "Davide", lastName: "de Feudis", age: 35 },
-  { firstName: "Balazs", lastName: "Danyadi", age: 33 },
-  { firstName: "Givara", lastName: "Mahfoud", age: 25 },
-  { firstName: "Maria", lastName: "Nanakou", age: 40 },
-  { firstName: "Mojgan", lastName: "Vafa", age: 23 },
-  { firstName: "Ion", lastName: "Lazarev", age: 30 },
-  { firstName: "Christophe", lastName: "Troudart", age: 23 },
-  { firstName: "Karol", lastName: "Polakowski", age: 30 }
+const classMates = [{
+    firstName: "Nic",
+    lastName: "Solitom",
+    age: 32
+  },
+  {
+    firstName: "Naima",
+    lastName: "Adan Ahmed",
+    age: 29
+  },
+  {
+    firstName: "Davide",
+    lastName: "de Feudis",
+    age: 35
+  },
+  {
+    firstName: "Balazs",
+    lastName: "Danyadi",
+    age: 33
+  },
+  {
+    firstName: "Givara",
+    lastName: "Mahfoud",
+    age: 25
+  },
+  {
+    firstName: "Maria",
+    lastName: "Nanakou",
+    age: 40
+  },
+  {
+    firstName: "Mojgan",
+    lastName: "Vafa",
+    age: 23
+  },
+  {
+    firstName: "Ion",
+    lastName: "Lazarev",
+    age: 30
+  },
+  {
+    firstName: "Christophe",
+    lastName: "Troudart",
+    age: 23
+  },
+  {
+    firstName: "Karol",
+    lastName: "Polakowski",
+    age: 30
+  }
 ];
 
 // console.log(classMates);
 
-const arr = classMates.map(student=> `${student.firstName} ${student.lastName} is ${student.age} years old.` )
+const arr = classMates.map(student => `${student.firstName} ${student.lastName} is ${student.age} years old.`)
 
-console.log(arr);
+// console.log(arr);
+
+console.log(classMates.reduce((acc, student) => {
+  return  acc + student.age;
+}, 0));
+
+
