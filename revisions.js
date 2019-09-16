@@ -115,5 +115,13 @@ console.log(sentences);
 // ...But Array.prototype.reduce is much better for it
 
 // Exercise: Use reduce to do the exact same thing that we did above.
-let sumWithReduce = students.reduce((total,student) => total+student.age,0);
+let sumWithReduce = students.reduce(
+  //(total,student) => { return total + student.age }
+  function(total,student){
+    console.log(total);
+    console.log(student);
+    console.log("Just first name - ",student.firstName);
+    return total + student.age
+  }
+  ,0);
 console.log(sumWithReduce);
