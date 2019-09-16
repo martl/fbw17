@@ -68,14 +68,56 @@
 
 // console.log(namesWithNumber);
 
-const profiles = [
-  { firstName: "Robert", lastName: "Ristock" },
-  { firstName: "Martina", lastName: "Freundorfer" },
-  { firstName: "Leon-Arno", lastName: "Rimrod" },
-  { firstName: "Itamar", lastName: "Givon" }
-];
+// const profiles = [
+//   { firstName: "Robert", lastName: "Ristock" },
+//   { firstName: "Martina", lastName: "Freundorfer" },
+//   { firstName: "Leon-Arno", lastName: "Rimrod" },
+//   { firstName: "Itamar", lastName: "Givon" }
+// ];
 
 /**
  * Exercise:
  * Map the array above into a new array containing just the last names
  */
+// const profiles = [
+//   {firstName: "Robert", lastName: "Rostock"},
+//   {firstName: "Martina", lastName: "Freundorfer"},
+//   {firstName: "Leon-Arno", lastName: "Rimrod"},
+//   {firstName: "Itamar", lastName: "Givon"},
+// ]
+
+// const newProfiles = profiles.map(profile => {
+//   var newArray = profile.lastName;
+//   return newArray
+// }
+// )
+
+// // console.log(newProfiles)
+
+// const newProfiles = profiles.map(profile => {
+//     return profile.lastName;})
+
+//     console.log(newProfiles)
+
+
+    let classmates = [
+      {firstName: "Naima", lastName: "Adan Ahmed" , Age: 29},
+      {firstName: "Balazs", lastName: "Danyadi" , Age: 33},
+      {firstName: "Givara", lastName: "Mahfoud" , Age: 25},
+      {firstName: "Ion", lastName: "Lazarev" , Age: 31},
+      {firstName: "Nic", lastName: "Solitom" , Age: 33},
+      {firstName: "Mojgan", lastName: "Vafa" , Age: 45},
+      {firstName: "Hamida", lastName: "Shinri" , Age: 29},
+      {firstName: "Karol", lastName: "Polakowski" , Age: 29},
+      {firstName: "Christophe", lastName: "Troudart" , Age: 29},
+      {firstName: "Emma", lastName: "Blabla" , Age: 29},
+      
+    ]
+
+    console.log(classmates)
+
+
+    const newClassmates = classmates.map(classmates => {
+      return `${classmates.firstName}  ${classmates.lastName} is ${classmates.Age} years old`;})
+      
+      console.log(newClassmates)
