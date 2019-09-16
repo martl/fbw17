@@ -84,10 +84,6 @@
 // });
 // console.log(profilesLastNames);
 
-
-
-
-
 const classMates = [
   { firstName: "Nic", lastName: "Solitom", age: 32 },
   { firstName: "Naima", lastName: "Adan Ahmed", age: 29 },
@@ -98,7 +94,28 @@ const classMates = [
   { firstName: "Mojgan", lastName: "Vafa", age: 23 },
   { firstName: "Ion", lastName: "Lazarev", age: 30 },
   { firstName: "Christophe", lastName: "Troudart", age: 23 },
-  { firstName: "Karol", lastName: "Polakowski", age: 30 }
+  { firstName: "Karol", lastName: "Polakowski", age: 30 },
+  { firstName: "Bianca", lastName: "Richa", age: 33 },
+  { firstName: "Hassan", lastName: "Abu Shawish", age: 34 }
 ];
 
-console.log(classMates);
+// Create a new array of strings. The string should follow the pattern below:
+// Nic Solitom is 32 years old.
+const studentStrings = classMates.map(member => {
+  return `${member.firstName} ${member.lastName} is ${member.age} years old`;
+});
+
+// console.log(studentStrings);
+
+//// To get a single value out of an arry we can use a forEach...
+// let sum = 0; // Accumulator
+
+// classMates.forEach(student => {
+//   sum += student.age; // sum = sum + student.age
+// });
+
+// console.log(sum); // -> 150
+
+// ...But Array.prototype.reduce is much better for it
+
+// Exercise: Use reduce to do the exact same thing that we did above.
