@@ -98,10 +98,20 @@ let students = [
   { firstName: "Itamar", lastName: "Givon", age: 35 }
 ];
 
+<<<<<<< HEAD
 let sentences = students.map(student =>{
   return `${student.firstName} ${student.lastName} is ${student.age} years old`
 });
 console.log(sentences);
+=======
+// // Create a new array of strings. The string should follow the pattern below:
+// // Nic Solitom is 32 years old.
+// const studentStrings = classMates.map(member => {
+//   return `${member.firstName} ${member.lastName} is ${member.age} years old`;
+// });
+
+// console.log(studentStrings);
+>>>>>>> master
 
 //// To get a single value out of an arry we can use a forEach...
 // let sum = 0; // Accumulator
@@ -110,7 +120,7 @@ console.log(sentences);
 //   sum += student.age; // sum = sum + student.age
 // });
 
-// console.log(sum); // -> 150
+// console.log(sum); // -> 367
 
 // ...But Array.prototype.reduce is much better for it
 
@@ -125,3 +135,5 @@ let sumWithReduce = students.reduce(
   }
   ,0);
 console.log(sumWithReduce);
+
+// Exercise: Reduce the classMates array to a boolean that indicates whether there is an object with the firstName Mojgan is in it.
