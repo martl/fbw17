@@ -114,3 +114,11 @@ const studentString = studentArray.map((student) => {
   return `${student.firstName} ${student.lastName} is ${student.age} years old`;
 });
 console.log(studentString);
+
+//To get a single value out of an array we can use a forEach.
+
+let sum = 0; 
+studentArray.forEach(student =>{
+  sum += student.age; // sum = sum + student.age 
+});
+console.log(sum); // -> 309
