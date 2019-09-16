@@ -82,10 +82,9 @@ const people = [
   { firstName: "Karol", lastName: "Polakowski", age: 28 },
 
 ];
-const getLastName = people.map((name) => name.lastName );
+const getFirstName = people.map((name) => `${name.firstName} ${name.lastName} is ${name.age} years old`)
 
-console.log(getLastName);
-
+console.log(getFirstName)
 /**
  * Exercise:
  * Map the array above into a new array containing just the last names
