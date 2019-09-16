@@ -180,3 +180,9 @@ const checkForName = classMates.reduce((sum, student) => {
   return sum;
 }, false);
 console.log(checkForName);
+
+// Itamar's solution:
+const wheresMojgan = classMates.reduce((hasMojgan, student) => {
+  return hasMojgan || student.firstName === "Mojgan";
+}, false);
+console.log(wheresMojgan);
