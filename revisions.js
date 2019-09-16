@@ -98,14 +98,32 @@ const classMates = [
   { firstName: "Mojgan", lastName: "Vafa", age: 23 },
   { firstName: "Ion", lastName: "Lazarev", age: 30 },
   { firstName: "Christophe", lastName: "Troudart", age: 23 },
-  { firstName: "Karol", lastName: "Polakowski", age: 30 }
+  { firstName: "Karol", lastName: "Polakowski", age: 30 },
+  { firstName: "Bianca", lastName: "Richa", age: 33 },
+  { firstName: "Hassan", lastName: "Abu Shawish", age: 34 }
 ];
 
 // Create a new array of strings. The strings should follow the pattern below:
 // Nic Solitom is 32 years old.
 
-const classMatesArrayOfStrings = classMates.map((name) => {
+const classMatesArrayOfStrings = classMates.map(name => {
   return `${name.firstName} ${name.lastName} is ${name.age} years old`;
 });
-
 console.log(classMatesArrayOfStrings);
+
+// Shorter version: 
+const classMatesArrayOfStrings2 = classMates.map(name =>
+  `${name.firstName} ${name.lastName} is ${name.age} years old`
+);
+
+console.log(classMatesArrayOfStrings2);
+
+// To get a single value out of an array we can use a forEach
+let sum = 0; // Accumulator
+
+classMates.forEach(student => { // student = Value
+  sum += student.age; // Modifier
+});
+console.log(sum);
+
+
