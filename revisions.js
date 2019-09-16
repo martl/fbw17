@@ -68,31 +68,38 @@
 
 // console.log(namesWithNumber);
 
-const profiles = [
-  { firstName: "Robert", lastName: "Ristock" },
-  { firstName: "Martina", lastName: "Freundorfer" },
-  { firstName: "Leon-Arno", lastName: "Rimrod" },
-  { firstName: "Itamar", lastName: "Givon" }
-];
+// const profiles = [
+//   { firstName: "Robert", lastName: "Ristock" },
+//   { firstName: "Martina", lastName: "Freundorfer" },
+//   { firstName: "Leon-Arno", lastName: "Rimrod" },
+//   { firstName: "Itamar", lastName: "Givon" }
+// ];
 
-const justNames = profiles.map((person)=>{
-  return person.lastName
-});
-console.log(justNames);
+// const justNames = profiles.map((person)=>{
+//   return person.lastName
+// });
+// console.log(justNames);
 
 /**
  * Exercise:
  * Map the array above into a new array containing just the last names
  */
 let students = [
-  {firstName:"Nic",lastName:"Solitom",age:32},
-  {firstName:"Naima",lastName:"Adan Ahmed",age:29},
-  {firstName:"Davide",lastName:"De Feudis",age:21},
-  {firstName:"Balazs",lastName:"Danyadi",age:33},
-  {firstName:"Givara",lastName:"Mahfoud",age:25},
-  {firstName:"Maria",lastName:"Nanakou",age:40},
-  {firstName:"Mojgan",lastName:"Vafa",age:23},
-  {firstName:"Ion",lastName:"Lazarev",age:30},
-  {firstName:"Christophe",lastName:"Troudart",age:23},
-  {firstName:"Karol",lastName:"Polakowski",age:30}
+  { firstName: "Nic", lastName: "Solitom", age: 32 },
+  { firstName: "Naima", lastName: "Adan Ahmed", age: 29 },
+  { firstName: "Davide", lastName: "De Feudis", age: 21 },
+  { firstName: "Balazs", lastName: "Danyadi", age: 33 },
+  { firstName: "Givara", lastName: "Mahfoud", age: 25 },
+  { firstName: "Maria", lastName: "Nanakou", age: 40 },
+  { firstName: "Mojgan", lastName: "Vafa", age: 23 },
+  { firstName: "Ion", lastName: "Lazarev", age: 30 },
+  { firstName: "Christophe", lastName: "Troudart", age: 23 },
+  { firstName: "Karol", lastName: "Polakowski", age: 30 }
 ]
+
+const studentsStrings = students.map((student) => {
+  return `${student.firstName} ${student.lastName} is ${student.age} years old`
+
+});
+
+console.log(studentsStrings)
