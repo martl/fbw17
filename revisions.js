@@ -79,7 +79,7 @@
  * Exercise:
  * Map the array above into a new array containing just the last names
  */
-var reformMe = profiles.map(profile => {
+/*var reformMe = profiles.map(profile => {
   return profile.lastName
 });
 console.log(reformMe);
@@ -135,6 +135,7 @@ const newArray = arrayOfStudent.map((student) => {
   return `${student.name} ${student.lastName} is ${student.age} years old.`;
 })
 console.log(newArray);
+*/
 // const profilesLastNames = profiles.map((profile) => {
 //   return `${profile.lastName}`;
 // });
@@ -175,3 +176,7 @@ const studentStrings = classMates.map(member => {
 // ...But Array.prototype.reduce is much better for it
 
 // Exercise: Use reduce to do the exact same thing that we did above.
+const sumAges=  classMates.reduce(function (sum, student) {
+         return sum + student.age;
+ }, 0) ;
+ console.log(sumAges);
