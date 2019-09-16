@@ -68,13 +68,21 @@
 
 // console.log(namesWithNumber);
 
-const profiles = [
-  { firstName: "Robert", lastName: "Ristock" },
-  { firstName: "Martina", lastName: "Freundorfer" },
-  { firstName: "Leon-Arno", lastName: "Rimrod" },
-  { firstName: "Itamar", lastName: "Givon" }
+const people = [
+  { firstName: "Nic", lastName: "Solitom", age: 32 },
+  { firstName: "Naima", lastName: "Adan Ahmed", age: 29 },
+  { firstName: "Davide", lastName: "De Feudis", age: 35 },
+  { firstName: "Balazs", lastName: "Danyadi", age: 33 },
+  { firstName: "Givara", lastName: "Mahfoud", age: 25 },
+  { firstName: "Maria", lastName: "Nanakou", age: 40 },
+  { firstName: "Mojgan", lastName: "vafa", age: 32 },
+  { firstName: "Ion", lastName: "Lazarev", age: 30 },
+  { firstName: "hassan", lastName: "abushawsh", age: 30 },
+  { firstName: "Tareq", lastName: "Almasri", age: 28 },
+  { firstName: "Karol", lastName: "Polakowski", age: 28 },
+
 ];
-const getLastName = profiles.map((profile) => profile.lastName );
+const getLastName = people.map((name) => name.lastName );
 
 console.log(getLastName);
 
