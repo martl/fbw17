@@ -80,7 +80,24 @@ const profiles = [
  * Map the array above into a new array containing just the last names
  */
 
-const lastNames = profiles.map( profile => {
+const lastNames = profiles.map(profile => {
   return profile.lastName;
 });
 console.log(lastNames);
+
+
+// Create an array of student objects : first name, last name, age
+
+const studentArray = [
+  { firstName: "Christophe", lastName: "Troudart", age: 23 },
+{ firstName: "Nic", lastName: "Solitom", age: 32},
+{  firstName: "Naima", lastName: "Adan Ahmed", age: 29},
+{  firstName: "David", lastName: "De Feudis", age:35 },
+{  firstName: "Balazs", lastName: "Danyadi", age: 33},
+{  firstName: "Givara", lastName: "Mahoud", age: 25},
+{  firstName: "Maria", lastName: "Nanakou", age: 35},
+{  firstName: "Mojgan", lastName: "Vafa", age: 37},
+{  firstName: "Ion", lastName: "Lazarev", age: 30},
+{  firstName: "Karol", lastName: "Polakowski", age: 30}
+];
+console.log(studentArray);
