@@ -79,6 +79,49 @@
  * Exercise:
  * Map the array above into a new array containing just the last names
  */
+
+// const lastNames = profiles.map(profile => {
+//   return profile.lastName;
+// });
+// console.log(lastNames);
+
+
+// Create an array of student objects : first name, last name, age
+
+const studentArray = [
+  { firstName: "Christophe", lastName: "Troudart", age: 23 },
+  { firstName: "Nic", lastName: "Solitom", age: 32 },
+  { firstName: "Naima", lastName: "Adan Ahmed", age: 29 },
+  { firstName: "David", lastName: "De Feudis", age: 35 },
+  { firstName: "Balazs", lastName: "Danyadi", age: 33 },
+  { firstName: "Givara", lastName: "Mahoud", age: 25 },
+  { firstName: "Maria", lastName: "Nanakou", age: 35 },
+  { firstName: "Mojgan", lastName: "Vafa", age: 37 },
+  { firstName: "Ion", lastName: "Lazarev", age: 30 },
+  { firstName: "Karol", lastName: "Polakowski", age: 30 }
+];
+console.log(studentArray);
+
+// const lastNames = profiles.map( profile => {
+//   return profile.lastName;
+// });
+// console.log(lastNames);
+
+//Create a new array of strings. The string should follow the pattern below.
+//Nic Solitom is 32 years old.
+
+const studentString = studentArray.map((student) => {
+  return `${student.firstName} ${student.lastName} is ${student.age} years old`;
+});
+console.log(studentString);
+
+//To get a single value out of an array we can use a forEach.
+
+let sum = 0;
+studentArray.forEach(student => {
+  sum += student.age; // sum = sum + student.age 
+});
+console.log(sum); // -> 309
 // const profilesLastNames = profiles.map((profile) => {
 //   return `${profile.lastName}`;
 // });
@@ -107,7 +150,7 @@ const studentStrings = classMates.map(member => {
 
 // console.log(studentStrings);
 
-//// To get a single value out of an arry we can use a forEach...
+//// To get a single value out of an array we can use a forEach...
 // let sum = 0; // Accumulator
 
 // classMates.forEach(student => {
@@ -119,3 +162,8 @@ const studentStrings = classMates.map(member => {
 // ...But Array.prototype.reduce is much better for it
 
 // Exercise: Use reduce to do the exact same thing that we did above.
+
+let reduceAgeStudent = classMates.reduce(function(accumulator, currentValue){ 
+return accumulator + currentValue.age;
+},0);
+console.log(reduceAgeStudent);
