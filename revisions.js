@@ -138,6 +138,11 @@ const classMates = [{
   }
 ];
 
+
+
+
+
+
 // // Create a new array of strings. The string should follow the pattern below:
 // // Nic Solitom is 32 years old.
 // const studentStrings = classMates.map(member => {
@@ -158,6 +163,12 @@ const classMates = [{
 // console.log(sum)
 
 
+
+
+
+
+
+
 // Exercise: Use reduce to do the exact same thing that we did above.
 
 // const ageSum = classMates.reduce((sum, student) => {
@@ -167,42 +178,13 @@ const classMates = [{
 // console.log(ageSum); // -> 367
 
 
+
+
+
+
+
+
 // Exercise: Reduce the classMates array to a boolean that indicates whether there is an object with the firstName Mojgan.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -225,6 +207,7 @@ const classMates = [{
 
 // const includeStudent = classMates.filter(v => v.firstName === 'Mojgan')
 // console.log(includeStudent);
+
 
 
 
