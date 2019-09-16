@@ -23,10 +23,10 @@ console.log(newArray);
 //get a single value we can use forEach
 //get the age with reduce this time
 
-const sumOfAges = arrayOfStudents.reduce(function(sum,age){
-  return sum =+arrayOfStudent.age;
+const sumOfAges = arrayOfStudents.reduce(function(sum,student){
+  return sum + student.age;
 },0);
-
+console.log(sumOfAges);
 
 
 
