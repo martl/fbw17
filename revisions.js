@@ -166,6 +166,67 @@ const classMates = [{
 
 // console.log(ageSum); // -> 367
 
-// Exercise: Reduce the classMates array to a boolean that indicates whether there is an object with the firstName Mojgan is in it.
 
-const a = classMates.reduce((a, student)=> )
+// Exercise: Reduce the classMates array to a boolean that indicates whether there is an object with the firstName Mojgan.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const includeStudent = classMates.reduce((acc, student)=> {
+//   if(student.firstName === 'Mojgan') acc = true;
+//   return acc;
+// }, false);
+// console.log(includeStudent);
+
+// const includeStudent = classMates.reduce((hasMojgan, student)=> {
+//   return hasMojgan || student.firstName === 'Mojgan';
+// }, false);
+// console.log(includeStudent);
+
+// false || false is false
+// true || false is true; if there is 1 true is not going to check the next
+
+// const includeStudent = classMates.some(v => v.firstName === 'Mojgan')
+// console.log(includeStudent);
+
+// const includeStudent = classMates.filter(v => v.firstName === 'Mojgan')
+// console.log(includeStudent);
+
+
+
+
+
