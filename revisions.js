@@ -84,62 +84,20 @@
 // });
 // console.log(profilesLastNames);
 
-
-
-const classMates = [{
-    firstName: "Nic",
-    lastName: "Solitom",
-    age: 32
-  },
-  {
-    firstName: "Naima",
-    lastName: "Adan Ahmed",
-    age: 29
-  },
-  {
-    firstName: "Davide",
-    lastName: "de Feudis",
-    age: 35
-  },
-  {
-    firstName: "Balazs",
-    lastName: "Danyadi",
-    age: 33
-  },
-  {
-    firstName: "Givara",
-    lastName: "Mahfoud",
-    age: 25
-  },
-  {
-    firstName: "Maria",
-    lastName: "Nanakou",
-    age: 40
-  },
-  {
-    firstName: "Mojgan",
-    lastName: "Vafa",
-    age: 23
-  },
-  {
-    firstName: "Ion",
-    lastName: "Lazarev",
-    age: 30
-  },
-  {
-    firstName: "Christophe",
-    lastName: "Troudart",
-    age: 23
-  },
-  {
-    firstName: "Karol",
-    lastName: "Polakowski",
-    age: 30
-  }
+const classMates = [
+  { firstName: "Nic", lastName: "Solitom", age: 32 },
+  { firstName: "Naima", lastName: "Adan Ahmed", age: 29 },
+  { firstName: "Davide", lastName: "de Feudis", age: 35 },
+  { firstName: "Balazs", lastName: "Danyadi", age: 33 },
+  { firstName: "Givara", lastName: "Mahfoud", age: 25 },
+  { firstName: "Maria", lastName: "Nanakou", age: 40 },
+  { firstName: "Mojgan", lastName: "Vafa", age: 23 },
+  { firstName: "Ion", lastName: "Lazarev", age: 30 },
+  { firstName: "Christophe", lastName: "Troudart", age: 23 },
+  { firstName: "Karol", lastName: "Polakowski", age: 30 },
+  { firstName: "Bianca", lastName: "Richa", age: 33 },
+  { firstName: "Hassan", lastName: "Abu Shawish", age: 34 }
 ];
-
-
-
 
 
 
@@ -149,23 +107,18 @@ const classMates = [{
 //   return `${member.firstName} ${member.lastName} is ${member.age} years old`;
 // });
 
-// const arr = classMates.map(student => `${student.firstName} ${student.lastName} is ${student.age} years old.`)
+// console.log(studentStrings);
 
-// console.log(arr);
+//// To get a single value out of an arry we can use a forEach...
+// let sum = 0; // Accumulator
 
-// console.log(classMates.reduce((acc, student) => {
-//   return  acc + student.age;
-// }, 0));
+// classMates.forEach(student => {
+//   sum += student.age; // sum = sum + student.age
+// });
 
 // console.log(sum); // -> 367
 
-// const sum = classMates.reduce((total, sum) => total + sum.age, 0);
-// console.log(sum)
-
-
-
-
-
+// ...But Array.prototype.reduce is much better for it
 
 
 
@@ -179,14 +132,14 @@ const classMates = [{
 
 
 
+// Exercise: Reduce the classMates array to a boolean that indicates whether there is an object with the firstName Mojgan is in it.
 
+// We can use a reducer to check if a value is in an array...
+// const wheresMojgan = classMates.reduce((hasMojgan, student) => {
+//   return hasMojgan || student.firstName === "Mojgan";
+// }, false);
 
-
-
-
-// Exercise: Reduce the classMates array to a boolean that indicates whether there is an object with the firstName Mojgan.
-
-
+// console.log(wheresMojgan);
 
 // const includeStudent = classMates.reduce((acc, student)=> {
 //   if(student.firstName === 'Mojgan') acc = true;
@@ -194,25 +147,45 @@ const classMates = [{
 // }, false);
 // console.log(includeStudent);
 
-// const includeStudent = classMates.reduce((hasMojgan, student)=> {
-//   return hasMojgan || student.firstName === 'Mojgan';
-// }, false);
+
+// ... Buuuut, Array.prototype.includes is much better at it
+// const isMojganHere = classMates
+//   .map(student => {
+//     return student.firstName;
+//   })
+//   .includes("Mojgan");
+
+// console.log(isMojganHere);
+
+// const includeStudent = classMates.some(student => student.firstName === 'Mojgan')
 // console.log(includeStudent);
 
-// false || false is false
-// true || false is true; if there is 1 true is not going to check the next
 
-// const includeStudent = classMates.some(v => v.firstName === 'Mojgan')
-// console.log(includeStudent);
 
-// const includeStudent = classMates.filter(v => v.firstName === 'Mojgan')
-// console.log(includeStudent);
+// Bonus challenge: Find a way to achieve the same thing as above, but without using reduce, map or includes (or a for, forEach and while), MDN is your friend here...
+
+// const includeStudent = classMates.filter(student => student.firstName === 'Mojgan')
+// console.log((includeStudent.length > 0));
 
 
 
-
-
-
-
-// Exercise: Reduce the array of students int a a string of first nam and age seperated by commas. Ex: Nic is 32, Naime is 29...
+// Exercise: Reduce the array of students into a string of first name and age separated by commas. Ex: Nic is 32, Naima is 29...
 // Do this same task in *TWO* different ways
+
+// const str = classMates.reduce((acc, student) => {
+//   return `${acc} ${student.firstName} is ${student.age}, `
+// }, '');
+// console.log(str.substring(0, str.length - 2) + '.');
+
+// let str = '';
+// for (let student of classMates) {
+//   str += `${student.firstName} is ${student.age}, `;
+// }
+// console.log(str.substring(0, str.length - 2) + '.');
+
+
+
+// Exercise: check that all the students are over 18.
+
+// console.log(classMates.every(student => student.age > 18)
+
