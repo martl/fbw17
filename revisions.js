@@ -151,3 +151,27 @@ function interruptedReduce(arrayOfStudents){
   }
 }
 console.log(interruptedReduce(students));
+
+// SOME
+let hasMojgan = students.some((student,i)=>{
+  console.log(i);
+  return student.firstName==="Mojgan";
+})
+console.log(hasMojgan);
+
+// Bonus challenge: Find a way to achieve the same thing as above, but without using reduce, map or includes (or a for, forEach and while), MDN is your friend here...
+
+// Exercise: Reduce the array of students into a string of first name and age separated by commas. Ex: Nic is 32, Naima is 29...
+// Do this same task in *TWO* different ways
+
+// FIRST WAY
+let stringResult = students.reduce((acc,student)=>{
+  return acc.concat(`${student.firstName} is ${student.age}`)
+},[]).join(", ");
+console.log(stringResult);
+
+// SECOND WAY
+let stringResult1 = students.reduce((acc,student)=>{
+  return acc.concat(`${student.firstName} is ${student.age}, `)
+},"").slice(0,-2);
+console.log(stringResult1);
