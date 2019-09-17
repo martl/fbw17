@@ -220,16 +220,23 @@ console.log(isMojganHere);
 // Exercise: Reduce the array of students int a a string of first nam and age seperated by commas. Ex: Nic is 32, Naime is 29...
 // Do this same task in *TWO* different ways.
 
-const firstString = classMates.reduce((result, student) => {
+// First solution: (without a trailing comma)
+
+let tempString2 = classMates.reduce((result, student) => {
   return result + `${student.firstName} is ${student.age}, `;
 }, "");
+tempString2 = tempString2.substr(0, tempString2.length - 2).concat('.');
+console.log(tempString2);
 
-console.log(firstString);
 
-// Second solution:
-const stringMaker = (result, student) => result + `${student.firstName} is ${student.age}, `;
-console.log(classMates.reduce(stringMaker, ""));
+// Second solution: (without a trailing comma)
+function makeString(array) {
+  let tempString = "";
+  let stringMaker = (result, student) => result + `${student.firstName} is ${student.age}, `;
+  tempString = classMates.reduce(stringMaker, "");
+  tempString = tempString.substr(0, tempString.length - 2).concat('.');
+  return tempString;
+};
+console.log(makeString(classMates));
+
 // Bonus challenge: Find a way to achieve the same thing as above, but without using reduce, map or includes (or a for, forEach and while), MDN is your friend here...
-
-// Exercise: Reduce the array of students into a string of first name and age separated by commas. Ex: Nic is 32, Naima is 29...
-// Do this same task in *TWO* different ways
