@@ -174,3 +174,15 @@ const anotherSentence = classmates.map((students)=>{
 
 console.log(anotherSentence)
 
+
+
+function filterMojgan(classmates) {
+  if (classmates.firstName == "Mojgan") {
+    return true;
+  }  
+}
+var isSheThere = classmates.filter(filterMojgan);
+
+
+
+console.log(isSheThere);
