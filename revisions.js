@@ -120,10 +120,31 @@ const classMates = [
 
 // Exercise: Use reduce to do the exact same thing that we did above.
 
-const ageSum = classMates.reduce((sum, student) => {
-  return sum + student.age;
-}, 0);
+// const ageSum = classMates.reduce((sum, student) => {
+//   return sum + student.age;
+// }, 0);
 
-console.log(ageSum); // -> 367
+// console.log(ageSum); // -> 367
 
 // Exercise: Reduce the classMates array to a boolean that indicates whether there is an object with the firstName Mojgan is in it.
+
+// We can use a reducer to check if a value is in an array...
+// const wheresMojgan = classMates.reduce((hasMojgan, student) => {
+//   return hasMojgan || student.firstName === "Mojgan";
+// }, false);
+
+// console.log(wheresMojgan);
+
+// ... Buuuut, Array.prototype.includes is much better at it
+const isMojganHere = classMates
+  .map(student => {
+    return student.firstName;
+  })
+  .includes("Mojgan");
+
+console.log(isMojganHere);
+
+// Bonus challenge: Find a way to achieve the same thing as above, but without using reduce, map or includes (or a for, forEach and while), MDN is your friend here...
+
+// Exercise: Reduce the array of students into a string of first name and age separated by commas. Ex: Nic is 32, Naima is 29...
+// Do this same task in *TWO* different ways
