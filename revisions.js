@@ -126,13 +126,28 @@ let sumWithReduce = students.reduce(
   ,0);
 console.log(sumWithReduce);
 
-// Exercise: Reduce the classMates array to a boolean that indicates whether there is an object with the firstName Mojgan is in it.
-let isNameInArray = students.reduce((result,student)=>{
-  if(student.firstName==="Ion" || student.firstName==="Karol"){
-    result = true;
-  }
-  return result;
 
-  // return student.firstName==="Ion" ? true : result;
-},false)
-console.log(isNameInArray);
+// Exercise: Reduce the classMates array to a boolean that indicates whether there is an object with the firstName Mojgan is in it.
+
+// RECURSIVE WAY
+let myreduce = function(array,start,searchedName){
+  while(start<array.length){
+    return array[start].firstName===searchedName ? true : myreduce(array,++start,searchedName);;
+  }
+  return false;
+}
+console.log(myreduce(students,0,"Mojgan"));
+
+// THROW WAY
+function interruptedReduce(arrayOfStudents){
+  try{
+    return arrayOfStudents.reduce((hasMojgan,student,i)=>{  
+        console.log(i);
+        return student.firstName==="Mojgan" && (()=>{throw true})(); 
+
+    },false);
+  }catch(err){
+    return err;
+  }
+}
+console.log(interruptedReduce(students));
