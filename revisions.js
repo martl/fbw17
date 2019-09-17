@@ -127,16 +127,11 @@ console.log(classmates);
 
 //   console.log(sum)
 
-
-
 // const totalAge = classmates.reduce ((accumulator, object) =>{
 //   return accumulator + object.Age;
 // },0)
 
 // console.log(totalAge)
-
-
-
 
 // Exercise: Reduce the classMates array to a boolean that indicates whether there is an object with the firstName Mojgan is in it.
 
@@ -159,30 +154,22 @@ console.log(isMojganHere);
 // Exercise: Reduce the array of students int a a string of first nam and age seperated by commas. Ex: Nic is 32, Naime is 29...
 // Do this same task in *TWO* different ways
 
-const sentences = classmates.reduce((acc,student)=>{
+const sentences = classmates.reduce((acc, student) => {
   return `${acc} ${student.firstName}  is ${student.Age}.`;
-},"")
+}, "");
 
-console.log(sentences)
+console.log(sentences);
 
-
-
-
-const anotherSentence = classmates.map((students)=>{
-  return `${students.firstName} is ${students.Age}.`
+const anotherSentence = classmates.map(students => {
+  return `${students.firstName} is ${students.Age}.`;
 });
 
-console.log(anotherSentence)
+console.log(anotherSentence);
 
-
-
-function filterMojgan(classmates) {
-  if (classmates.firstName == "Mojgan") {
-    return true;
-  }  
-}
-var isSheThere = classmates.filter(filterMojgan);
-
-
-
-console.log(isSheThere);
+const filterName =
+  classmates.filter(student => {
+    return student.firstName === "Mojgan";
+  }).length != 0
+    ? true
+    : false;
+console.log(filterName);
