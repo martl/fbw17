@@ -75,6 +75,7 @@
 //   { firstName: "Itamar", lastName: "Givon" }
 // ];
 
+
 /**
  * Exercise:
  * Map the array above into a new array containing just the last names
@@ -83,6 +84,9 @@
 //   return `${profile.lastName}`;
 // });
 // console.log(profilesLastNames);
+
+
+
 
 const classMates = [
   { firstName: "Nic", lastName: "Solitom", age: 32 },
@@ -99,6 +103,35 @@ const classMates = [
   { firstName: "Hassan", lastName: "Abu Shawish", age: 34 }
 ];
 
+// Create a new array of strings. The strings should follow the pattern below:
+// Nic Solitom is 32 years old.
+
+const classMatesArrayOfStrings = classMates.map(name => {
+  return `${name.firstName} ${name.lastName} is ${name.age} years old`;
+});
+console.log(classMatesArrayOfStrings);
+
+// Shorter version: 
+const classMatesArrayOfStrings2 = classMates.map(name =>
+  `${name.firstName} ${name.lastName} is ${name.age} years old`
+);
+
+console.log(classMatesArrayOfStrings2);
+
+// To get a single value out of an array we can use a forEach
+let sum = 0; // Accumulator
+
+classMates.forEach(student => { // student = Value
+  sum += student.age; // Modifier
+});
+console.log(sum);
+
+
+// Create a new array of strings. The string should follow the pattern below:
+// Nic Solitom is 32 years old.
+const studentStrings = classMates.map(member => {
+  return `${member.firstName} ${member.lastName} is ${member.age} years old`;
+});
 // // Create a new array of strings. The string should follow the pattern below:
 // // Nic Solitom is 32 years old.
 // const studentStrings = classMates.map(member => {
@@ -120,6 +153,20 @@ const classMates = [
 
 // Exercise: Use reduce to do the exact same thing that we did above.
 
+// But Array.prototype.reduce is much better for it:
+
+const reducedAge = classMates.reduce(function (accumulator, currentValue) {
+  return accumulator + currentValue.age;
+}, 0);
+console.log(reducedAge);
+
+// And as Arrow function:
+const reducedAgeArrowFunction = classMates.reduce((accumulator, currentValue) => accumulator + currentValue.age, 0);
+
+console.log(reducedAgeArrowFunction);
+const ageSum = classMates.reduce((sum, student) => {
+  return sum + student.age;
+}, 0);
 // const ageSum = classMates.reduce((sum, student) => {
 //   return sum + student.age;
 // }, 0);
@@ -127,6 +174,32 @@ const classMates = [
 // console.log(ageSum); // -> 367
 
 // Exercise: Reduce the classMates array to a boolean that indicates whether there is an object with the firstName Mojgan is in it.
+
+
+// const checkForName = classMates.reduce((sum, student) => {
+//   if (student.firstName === "Mojgan") {
+//     return true;
+//   };
+//   return sum;
+// }, false);
+// console.log(checkForName);
+
+// // Itamar's solution:
+// const wheresMojgan = classMates.reduce((hasMojgan, student) => {
+//   return hasMojgan || student.firstName === "Mojgan";
+// }, false);
+// console.log(wheresMojgan);
+
+
+// ... Buuut, Array.prototype.includes is much better at it:
+
+// const isMojganHere = classMates
+// .map((student) => {
+//   return student.firstName;
+// })
+// .includes("Mojgan");
+
+// console.log(isMojganHere);
 
 // We can use a reducer to check if a value is in an array...
 // const wheresMojgan = classMates.reduce((hasMojgan, student) => {
@@ -144,7 +217,26 @@ const isMojganHere = classMates
 
 console.log(isMojganHere);
 
-// Bonus challenge: Find a way to achieve the same thing as above, but without using reduce, map or includes (or a for, forEach and while), MDN is your friend here...
+// Exercise: Reduce the array of students int a a string of first nam and age seperated by commas. Ex: Nic is 32, Naime is 29...
+// Do this same task in *TWO* different ways.
 
-// Exercise: Reduce the array of students into a string of first name and age separated by commas. Ex: Nic is 32, Naima is 29...
-// Do this same task in *TWO* different ways
+// First solution: (without a trailing comma)
+
+let tempString2 = classMates.reduce((result, student) => {
+  return result + `${student.firstName} is ${student.age}, `;
+}, "");
+tempString2 = tempString2.substr(0, tempString2.length - 2).concat('.');
+console.log(tempString2);
+
+
+// Second solution: (without a trailing comma)
+function makeString(array) {
+  let tempString = "";
+  let stringMaker = (result, student) => result + `${student.firstName} is ${student.age}, `;
+  tempString = classMates.reduce(stringMaker, "");
+  tempString = tempString.substr(0, tempString.length - 2).concat('.');
+  return tempString;
+};
+console.log(makeString(classMates));
+
+// Bonus challenge: Find a way to achieve the same thing as above, but without using reduce, map or includes (or a for, forEach and while), MDN is your friend here...
