@@ -233,3 +233,8 @@ let filtered = students.filter(
   student => student.firstName[0].toUpperCase() === "N"
 );
 console.log(filtered);
+
+function inRange(number, range) {
+  return number <= range.max && number >= range.min;
+}
+console.log(inRange(4, { min: 0, max: 5 }));
