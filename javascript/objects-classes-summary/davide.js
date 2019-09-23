@@ -1,6 +1,6 @@
-const isNumberWithinRange = (n, obj) => n >= obj.min && n <= obj.max;
+const separateKeysAndValues = obj => {
+    return {keys: Object.keys(obj), values: Object.values(obj)};
+};
 
-console.log(isNumberWithinRange(4, { min: 0, max: 5 }));
-console.log(isNumberWithinRange(4, { min: 4, max: 5 }));
-console.log(isNumberWithinRange(4, { min: 6, max: 10 }));
-console.log(isNumberWithinRange(5, { min: 5, max: 5 }));
+console.log(separateKeysAndValues({ a: 1, b: 2, c: 3 }));
+console.log(separateKeysAndValues({isBrown: true}));
