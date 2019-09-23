@@ -107,8 +107,6 @@ const classMates = [
   { firstName: "Hassan", lastName: "Abu Shawish", age: 34 }
 ];
 
-
-
 // // Create a new array of strings. The string should follow the pattern below:
 // // Nic Solitom is 32 years old.
 // const studentStrings = classMates.map(member => {
@@ -128,8 +126,6 @@ const classMates = [
 
 // ...But Array.prototype.reduce is much better for it
 
-
-
 // Exercise: Use reduce to do the exact same thing that we did above.
 
 // const ageSum = classMates.reduce((sum, student) => {
@@ -137,8 +133,6 @@ const classMates = [
 // }, 0);
 
 // console.log(ageSum); // -> 367
-
-
 
 // Exercise: Reduce the classMates array to a boolean that indicates whether there is an object with the firstName Mojgan is in it.
 
@@ -155,7 +149,6 @@ const classMates = [
 // }, false);
 // console.log(includeStudent);
 
-
 // ... Buuuut, Array.prototype.includes is much better at it
 // const isMojganHere = classMates
 //   .map(student => {
@@ -168,14 +161,10 @@ const classMates = [
 // const includeStudent = classMates.some(student => student.firstName === 'Mojgan')
 // console.log(includeStudent);
 
-
-
 // Bonus challenge: Find a way to achieve the same thing as above, but without using reduce, map or includes (or a for, forEach and while), MDN is your friend here...
 
 // const includeStudent = classMates.filter(student => student.firstName === 'Mojgan')
 // console.log((includeStudent.length > 0));
-
-
 
 // Exercise: Reduce the array of students into a string of first name and age separated by commas. Ex: Nic is 32, Naima is 29...
 // Do this same task in *TWO* different ways
@@ -191,10 +180,40 @@ const classMates = [
 // }
 // console.log(str.substring(0, str.length - 2) + '.');
 
-
-
 // Exercise: check that all the students are over 18.
 
 // console.log(classMates.every(student => student.age > 18)
 
-.
+/* 7. ** Exercise **: _(10 mins.)_ Write a function that takes an object and returns a new object with the keys and values in separate arrays.
+
+const convert = obj => {
+  return { keys: Object.keys(obj), values: Object.values(obj) };
+};
+console.log(convert({ a: 1, b: 2, c: 3 }));
+console.log(convert({ isDone: true })); */
+
+// Write a function that takes in an array of scrabble tiles, and returns the total score of the tiles together.
+
+const scoreOfTiles = arr => {
+  return arr.reduce((acc, curr) => acc + curr.score, 0);
+};
+
+console.log(scoreOfTiles([{ tile: "N", score: 1 }, { tile: "O", score: 1 }]));
+console.log(
+  scoreOfTiles([
+    { tile: "Y", score: 4 },
+    { tile: "E", score: 1 },
+    { tile: "S", score: 1 }
+  ])
+);
+console.log(
+  scoreOfTiles([
+    { tile: "N", score: 1 },
+    { tile: "K", score: 5 },
+    { tile: "Z", score: 10 },
+    { tile: "X", score: 8 },
+    { tile: "D", score: 2 },
+    { tile: "A", score: 1 },
+    { tile: "E", score: 1 }
+  ])
+);
