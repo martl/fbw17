@@ -174,6 +174,20 @@ console.log(hasMojgan);
 
 // Bonus challenge: Find a way to achieve the same thing as above, but without using reduce, map or includes (or a for, forEach and while), MDN is your friend here...
 
+// const isMojganHere = classMates.some(student => {
+//   return student.firstName === "Mojgan";
+// });
+
+// console.log(isMojganHere);
+
+// Warmup: Find in mdn, an array method, that will help us check that EVERY student is above the age of 18. Then use the method and store the boolean it returns in a variable
+
+// const allStudentsOver18 = classMates.every(student => {
+//   return student.age > 18;
+// });
+
+// console.log(allStudentsOver18); // -> true
+
 // Exercise: Reduce the array of students into a string of first name and age separated by commas. Ex: Nic is 32, Naima is 29...
 // Do this same task in *TWO* different ways
 // FIRST WAY
@@ -213,3 +227,9 @@ let summary = students.reduce(
   }
 );
 console.log(summary);
+
+// Exercise: to do the exact same thing as above with the Array.prototype.filter method
+let filtered = students.filter(
+  student => student.firstName[0].toUpperCase() === "N"
+);
+console.log(filtered);
