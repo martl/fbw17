@@ -191,4 +191,7 @@ let stringResult1 = students
   }, "")
   .slice(0, -2);
 console.log(stringResult1);
+
 // Warmup: Find in mdn, an array method, that will help us check thet EVERY student is above the age of 18. Then use the method and store the booleaqn it returns in a variable
+let above18 = students.every(student => student.age >= 18);
+console.log(above18);
