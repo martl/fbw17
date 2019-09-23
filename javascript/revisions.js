@@ -156,3 +156,5 @@ console.log(isMojganHere);
 
 // Exercise: Reduce the array of students into a string of first name and age separated by commas. Ex: Nic is 32, Naima is 29...
 // Do this same task in *TWO* different ways
+
+// Warmup: Find in mdn, an array method, that will help us check thet EVERY student is above the age of 18. Then use the method and store the booleaqn it returns in a variable
