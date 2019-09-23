@@ -1,3 +1,11 @@
+/**
+ * A Revisions file to cover:
+ * - Loops and connection to array methods
+ * - Array.prototype.forEach()
+ * - Array.prototype.map()
+ * - Array.prototype.reduce()
+ */
+
 // let names = [
 //   "Leon",
 //   "Karol",
@@ -90,7 +98,7 @@ const classMates = [
   { firstName: "Davide", lastName: "de Feudis", age: 35 },
   { firstName: "Balazs", lastName: "Danyadi", age: 33 },
   { firstName: "Givara", lastName: "Mahfoud", age: 25 },
-  { firstName: "Maria", lastName: "Nanakou", age: 40 },
+  { firstName: "maria", lastName: "Nanakou", age: 40 },
   { firstName: "Mojgan", lastName: "Vafa", age: 23 },
   { firstName: "Ion", lastName: "Lazarev", age: 30 },
   { firstName: "Christophe", lastName: "Troudart", age: 23 },
@@ -135,16 +143,61 @@ const classMates = [
 
 // console.log(wheresMojgan);
 
-// ... Buuuut, Array.prototype.includes is much better at it
-const isMojganHere = classMates
-  .map(student => {
-    return student.firstName;
-  })
-  .includes("Mojgan");
+// // ... Buuuut, Array.prototype.includes is much better at it
+// const isMojganHere = classMates
+//   .map(student => {
+//     return student.firstName;
+//   })
+//   .includes("Mojgan");
 
-console.log(isMojganHere);
+// console.log(isMojganHere);
 
 // Bonus challenge: Find a way to achieve the same thing as above, but without using reduce, map or includes (or a for, forEach and while), MDN is your friend here...
 
+// const isMojganHere = classMates.some(student => {
+//   return student.firstName === "Mojgan";
+// });
+
+// console.log(isMojganHere);
+
+// Warmup: Find in mdn, an array method, that will help us check that EVERY student is above the age of 18. Then use the method and store the boolean it returns in a variable
+
+// const allStudentsOver18 = classMates.every(student => {
+//   return student.age > 18;
+// });
+
+// console.log(allStudentsOver18); // -> true
+
 // Exercise: Reduce the array of students into a string of first name and age separated by commas. Ex: Nic is 32, Naima is 29...
 // Do this same task in *TWO* different ways
+
+// We can use reduce to get an object out of an array
+
+const ageInfo = classMates.reduce(
+  (summary, student, i) => {
+    const sum = summary.totalSum + student.age;
+    return {
+      totalSum: sum,
+      average: sum / (i + 1)
+    };
+  },
+  {
+    totalSum: 0,
+    average: 0
+  }
+);
+
+console.log(ageInfo);
+
+// We can also reduce an array, into another array: Filtering an array of student
+const studentsBeginWithM = classMates.reduce((filtered, student) => {
+  if (student.firstName[0].toLocaleUpperCase() === "M") {
+    filtered.push(student);
+  }
+
+  return filtered;
+}, []);
+
+console.log(studentsBeginWithM);
+
+// Exercise: to do the exact same thing as above with the Array.prototype.filter method
