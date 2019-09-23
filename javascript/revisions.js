@@ -197,3 +197,4 @@ const classMates = [
 
 // console.log(classMates.every(student => student.age > 18)
 
+.
