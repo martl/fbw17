@@ -143,18 +143,48 @@ const classMates = [
 
 // console.log(wheresMojgan);
 
-// ... Buuuut, Array.prototype.includes is much better at it
-const isMojganHere = classMates
-  .map(student => {
-    return student.firstName;
-  })
-  .includes("Mojgan");
+// // ... Buuuut, Array.prototype.includes is much better at it
+// const isMojganHere = classMates
+//   .map(student => {
+//     return student.firstName;
+//   })
+//   .includes("Mojgan");
 
-console.log(isMojganHere);
+// console.log(isMojganHere);
 
 // Bonus challenge: Find a way to achieve the same thing as above, but without using reduce, map or includes (or a for, forEach and while), MDN is your friend here...
+
+// const isMojganHere = classMates.some(student => {
+//   return student.firstName === "Mojgan";
+// });
+
+// console.log(isMojganHere);
+
+// Warmup: Find in mdn, an array method, that will help us check that EVERY student is above the age of 18. Then use the method and store the boolean it returns in a variable
+
+// const allStudentsOver18 = classMates.every(student => {
+//   return student.age > 18;
+// });
+
+// console.log(allStudentsOver18); // -> true
 
 // Exercise: Reduce the array of students into a string of first name and age separated by commas. Ex: Nic is 32, Naima is 29...
 // Do this same task in *TWO* different ways
 
-// Warmup: Find in mdn, an array method, that will help us check that EVERY student is above the age of 18. Then use the method and store the boolean it returns in a variable
+// We can use reduce to get an object out of an array
+
+const ageInfo = classMates.reduce(
+  (summary, student, i) => {
+    const sum = summary.totalSum + student.age;
+    return {
+      totalSum: sum,
+      average: sum / (i + 1)
+    };
+  },
+  {
+    totalSum: 0,
+    average: 0
+  }
+);
+
+console.log(ageInfo);
