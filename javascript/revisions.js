@@ -98,7 +98,7 @@ const classMates = [
   { firstName: "Davide", lastName: "de Feudis", age: 35 },
   { firstName: "Balazs", lastName: "Danyadi", age: 33 },
   { firstName: "Givara", lastName: "Mahfoud", age: 25 },
-  { firstName: "Maria", lastName: "Nanakou", age: 40 },
+  { firstName: "maria", lastName: "Nanakou", age: 40 },
   { firstName: "Mojgan", lastName: "Vafa", age: 23 },
   { firstName: "Ion", lastName: "Lazarev", age: 30 },
   { firstName: "Christophe", lastName: "Troudart", age: 23 },
@@ -188,3 +188,16 @@ const ageInfo = classMates.reduce(
 );
 
 console.log(ageInfo);
+
+// We can also reduce an array, into another array: Filtering an array of student
+const studentsBeginWithM = classMates.reduce((filtered, student) => {
+  if (student.firstName[0].toLocaleUpperCase() === "M") {
+    filtered.push(student);
+  }
+
+  return filtered;
+}, []);
+
+console.log(studentsBeginWithM);
+
+// Exercise: to do the exact same thing as above with the Array.prototype.filter method
