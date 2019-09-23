@@ -84,19 +84,66 @@
 // });
 // console.log(profilesLastNames);
 
-const classMates = [
-  { firstName: "Nic", lastName: "Solitom", age: 32 },
-  { firstName: "Naima", lastName: "Adan Ahmed", age: 29 },
-  { firstName: "Davide", lastName: "de Feudis", age: 35 },
-  { firstName: "Balazs", lastName: "Danyadi", age: 33 },
-  { firstName: "Givara", lastName: "Mahfoud", age: 25 },
-  { firstName: "Maria", lastName: "Nanakou", age: 40 },
-  { firstName: "Mojgan", lastName: "Vafa", age: 23 },
-  { firstName: "Ion", lastName: "Lazarev", age: 30 },
-  { firstName: "Christophe", lastName: "Troudart", age: 23 },
-  { firstName: "Karol", lastName: "Polakowski", age: 30 },
-  { firstName: "Bianca", lastName: "Richa", age: 33 },
-  { firstName: "Hassan", lastName: "Abu Shawish", age: 34 }
+const classMates = [{
+    firstName: "Nic",
+    lastName: "Solitom",
+    age: 32
+  },
+  {
+    firstName: "Naima",
+    lastName: "Adan Ahmed",
+    age: 29
+  },
+  {
+    firstName: "Davide",
+    lastName: "de Feudis",
+    age: 35
+  },
+  {
+    firstName: "Balazs",
+    lastName: "Danyadi",
+    age: 33
+  },
+  {
+    firstName: "Givara",
+    lastName: "Mahfoud",
+    age: 25
+  },
+  {
+    firstName: "Maria",
+    lastName: "Nanakou",
+    age: 40
+  },
+  {
+    firstName: "Mojgan",
+    lastName: "Vafa",
+    age: 23
+  },
+  {
+    firstName: "Ion",
+    lastName: "Lazarev",
+    age: 30
+  },
+  {
+    firstName: "Christophe",
+    lastName: "Troudart",
+    age: 23
+  },
+  {
+    firstName: "Karol",
+    lastName: "Polakowski",
+    age: 30
+  },
+  {
+    firstName: "Bianca",
+    lastName: "Richa",
+    age: 33
+  },
+  {
+    firstName: "Hassan",
+    lastName: "Abu Shawish",
+    age: 34
+  }
 ];
 
 
@@ -188,4 +235,40 @@ const classMates = [
 // Exercise: check that all the students are over 18.
 
 // console.log(classMates.every(student => student.age > 18)
+
+
+
+
+// const ageInfo = classMates.reduce((summary, student, i) => {
+//   const sum = summary.sum + student.age;
+//   const average = sum / i + 1;
+//   return {
+//     sum: sum,
+//     average: average
+//   }
+// }, {
+//   sum: 0,
+//   average: 0
+// });
+
+// console.log(ageInfo);
+
+
+
+
+// const studentBeginWithM = classMates.reduce((filteredArr, student) => {
+//   if (student.firstName[0].toUpperCase() === 'M') filteredArr.push(student);
+//   return filteredArr;
+// }, []);
+// console.log(studentBeginWithM)
+
+// const studentBeginWithM = []; 
+// classMates.forEach(student => {
+//   if (student.firstName[0].toUpperCase() === 'M') studentBeginWithM.push(student);
+// });
+// console.log(studentBeginWithM)
+
+// const studentBeginWithM = classMates.filter(student => student.firstName[0].toUpperCase() === 'M');
+// console.log(studentBeginWithM)
+
 
