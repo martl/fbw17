@@ -27,3 +27,27 @@ const splitter = (inputObject) => {
 
 console.log(splitter({ a: 1, b: 2, c: 3 }));
 console.log(splitter({ isBrown: true }));
+
+// 8. ** Challenge **: _(35 - 40 mins.)_ Write a function that takes in an array of scrabble tiles, and returns the total score of the tiles together.
+
+const scrabbleTiles1 = [{ tile: "N", score: 1 }, { tile: "O", score: 1 }]; // expect: 2
+const scrabbleTiles2 = [{ tile: "Y", score: 4 }, { tile: "E", score: 1 }, { tile: "S", score: 1 }]; // expect: 6
+const scrabbleTiles3 = [{ tile: "N", score: 1 }, { tile: "K", score: 5 }, { tile: "Z", score: 10 }, { tile: "X", score: 8 }, { tile: "D", score: 2 }, { tile: "A", score: 1 }, { tile: "E", score: 1 }]; //expect: 28
+
+const summingUp = (scrabbleTilesArray) => {
+    let sum = 0;
+    scrabbleTilesArray.forEach(function(tile) {
+        sum += tile.score;
+    });
+    return sum;
+};
+console.log(summingUp(scrabbleTiles1));
+console.log(summingUp(scrabbleTiles2));
+console.log(summingUp(scrabbleTiles3));
+
+
+
+//! MOR'S SOLUTION:
+const sumOfTiles = scrabbleTiles3.reduce((sum,array) => {
+    return array.score + sum}, 0);
+console.log(sumOfTiles);
