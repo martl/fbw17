@@ -52,6 +52,8 @@ const car = {
 
    _Note: Assume min <= max is always true._
 
+---
+
 ### Aside I: How to solve a programming problem
 
 - Rule 1: **Never** Assume -> To assume is to make an ass out of u and me
