@@ -82,7 +82,7 @@ We can access values on an object literal by writing the key name with dot notat
    1. [ ] `car{color}`
    1. [x] `car["color"]`
 
-Another way to access properties is with the bracket notation as seen above. See [`example.js`](example.js) for more info.
+Another way to access properties is with the bracket notation as seen above. See [`examples.js`](examples.js) for more info.
 
 5. All Objects are:
 
@@ -98,7 +98,7 @@ Another way to access properties is with the bracket notation as seen above. See
 
 While not all objects are arrays, all arrays **are** objects: `typeof []` evaluates to `'object'`. In order to check if a particular object is an array, we can use: `Array.isArray()`.
 
-Sometimes, converting all the keys or all the values of an object into an array might prove useful. For that we can use `Object.keys()` and `Object.values()`. See [`example.js`](example.js) for more info.
+Sometimes, converting all the keys or all the values of an object into an array might prove useful. For that we can use `Object.keys()` and `Object.values()`. See [`examples.js`](examples.js) for more info.
 
 7. **Exercise**: _(10 mins.)_ Write a function that takes an object and returns a new object with the keys and values in separate arrays.
 
