@@ -1,3 +1,11 @@
+/**
+ * A Revisions file to cover:
+ * - Loops and connection to array methods
+ * - Array.prototype.forEach()
+ * - Array.prototype.map()
+ * - Array.prototype.reduce()
+ */
+
 // let names = [
 //   "Leon",
 //   "Karol",
