@@ -195,3 +195,21 @@ console.log(stringResult1);
 // Warmup: Find in mdn, an array method, that will help us check thet EVERY student is above the age of 18. Then use the method and store the booleaqn it returns in a variable
 let above18 = students.every(student => student.age >= 18);
 console.log(above18);
+
+let summary = students.reduce(
+  (summary, student, i) => {
+    /* summary["totalAge"] += student.age;
+    summary["averageAge"] = summary.totalAge / (i + 1);
+    return summary; */
+    const sum = summary.totalAge + student.age;
+    return {
+      totalAge: sum,
+      averageAge: sum / (i + 1)
+    };
+  },
+  {
+    totalAge: 0,
+    averageAge: 0
+  }
+);
+console.log(summary);
