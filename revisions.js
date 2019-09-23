@@ -75,7 +75,6 @@
 //   { firstName: "Itamar", lastName: "Givon" }
 // ];
 
-
 /**
  * Exercise:
  * Map the array above into a new array containing just the last names
@@ -84,9 +83,6 @@
 //   return `${profile.lastName}`;
 // });
 // console.log(profilesLastNames);
-
-
-
 
 const classMates = [
   { firstName: "Nic", lastName: "Solitom", age: 32 },
@@ -111,9 +107,9 @@ const classMatesArrayOfStrings = classMates.map(name => {
 });
 console.log(classMatesArrayOfStrings);
 
-// Shorter version: 
-const classMatesArrayOfStrings2 = classMates.map(name =>
-  `${name.firstName} ${name.lastName} is ${name.age} years old`
+// Shorter version:
+const classMatesArrayOfStrings2 = classMates.map(
+  name => `${name.firstName} ${name.lastName} is ${name.age} years old`
 );
 
 console.log(classMatesArrayOfStrings2);
@@ -121,11 +117,11 @@ console.log(classMatesArrayOfStrings2);
 // To get a single value out of an array we can use a forEach
 let sum = 0; // Accumulator
 
-classMates.forEach(student => { // student = Value
+classMates.forEach(student => {
+  // student = Value
   sum += student.age; // Modifier
 });
 console.log(sum);
-
 
 // Create a new array of strings. The string should follow the pattern below:
 // Nic Solitom is 32 years old.
@@ -155,13 +151,16 @@ const studentStrings = classMates.map(member => {
 
 // But Array.prototype.reduce is much better for it:
 
-const reducedAge = classMates.reduce(function (accumulator, currentValue) {
+const reducedAge = classMates.reduce(function(accumulator, currentValue) {
   return accumulator + currentValue.age;
 }, 0);
 console.log(reducedAge);
 
 // And as Arrow function:
-const reducedAgeArrowFunction = classMates.reduce((accumulator, currentValue) => accumulator + currentValue.age, 0);
+const reducedAgeArrowFunction = classMates.reduce(
+  (accumulator, currentValue) => accumulator + currentValue.age,
+  0
+);
 
 console.log(reducedAgeArrowFunction);
 const ageSum = classMates.reduce((sum, student) => {
@@ -174,7 +173,6 @@ const ageSum = classMates.reduce((sum, student) => {
 // console.log(ageSum); // -> 367
 
 // Exercise: Reduce the classMates array to a boolean that indicates whether there is an object with the firstName Mojgan is in it.
-
 
 // const checkForName = classMates.reduce((sum, student) => {
 //   if (student.firstName === "Mojgan") {
@@ -189,7 +187,6 @@ const ageSum = classMates.reduce((sum, student) => {
 //   return hasMojgan || student.firstName === "Mojgan";
 // }, false);
 // console.log(wheresMojgan);
-
 
 // ... Buuut, Array.prototype.includes is much better at it:
 
@@ -225,18 +222,18 @@ console.log(isMojganHere);
 let tempString2 = classMates.reduce((result, student) => {
   return result + `${student.firstName} is ${student.age}, `;
 }, "");
-tempString2 = tempString2.substr(0, tempString2.length - 2).concat('.');
+tempString2 = tempString2.substr(0, tempString2.length - 2).concat(".");
 console.log(tempString2);
-
 
 // Second solution: (without a trailing comma)
 function makeString(array) {
   let tempString = "";
-  let stringMaker = (result, student) => result + `${student.firstName} is ${student.age}, `;
+  let stringMaker = (result, student) =>
+    result + `${student.firstName} is ${student.age}, `;
   tempString = classMates.reduce(stringMaker, "");
-  tempString = tempString.substr(0, tempString.length - 2).concat('.');
+  tempString = tempString.substr(0, tempString.length - 2).concat(".");
   return tempString;
-};
+}
 console.log(makeString(classMates));
 
-// Bonus challenge: Find a way to achieve the same thing as above, but without using reduce, map or includes (or a for, forEach and while), MDN is your friend here...
+// Bonus challenge: Find a way to achieve the same thing as above, but without using reduce, map or includes (or a for,forEach and while), MDN is your friend here...
