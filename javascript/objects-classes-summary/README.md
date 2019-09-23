@@ -74,36 +74,40 @@ _Example_: Breakdown of exercise above
 
 ### Accessing keys and values
 
-We can access values on an object literal by writing the key name with dot notation. i.e. if we have an object `car` with a `color` property we can write `car.color`
+We can access values on an object literal by writing the key name with dot notation. i.e. if we have an object `car` with a `color` property we can write `car.color`.
 
-3. Given an object car with a key "color", how can we access the value stored in color?
+4. Given an object car with a key "color", how can we access the value stored in color?
 
    0. [ ] `car[color]`
    1. [ ] `car{color}`
    1. [x] `car["color"]`
 
-Another way to access p
+Another way to access properties is with the bracket notation as seen above. See [`example.js`](example.js) for more info.
 
-1. All Objects are:
+5. All Objects are:
 
    0. [ ] Arrays
    1. [x] A collection of key value pairs
    1. [ ] A primitive data type
 
-1. How can we check if a value is an array?
+6. How can we check if a value is an array?
 
    0. [ ] A. Object.keys()
    1. [ ] B. Object.values()
    1. [x] C. Array.isArray()
 
-1. **Exercise**: _(10 mins.)_ Write a function that takes an object and returns a new object with the keys and values in separate arrays.
+While not all objects are arrays, all arrays **are** objects: `typeof []` evaluates to `'object'`. In order to check if a particular object is an array, we can use: `Array.isArray()`.
+
+Sometimes, converting all the keys or all the values of an object into an array might prove useful. For that we can use `Object.keys()` and `Object.values()`. See [`example.js`](example.js) for more info.
+
+7. **Exercise**: _(10 mins.)_ Write a function that takes an object and returns a new object with the keys and values in separate arrays.
 
    | Input                | Output                                       |
    | -------------------- | -------------------------------------------- |
    | { a: 1, b: 2, c: 3 } | { keys: ["a", "b", "c"], values: [1, 2, 3] } |
    | {isBrown: true}      | { keys: ["isBrown"], values: [true] }        |
 
-1. **Challenge**: _(35-40 mins.)_ Write a function that takes in an array of scrabble tiles, and returns the total score of the tiles together.
+8. **Challenge**: _(35-40 mins.)_ Write a function that takes in an array of scrabble tiles, and returns the total score of the tiles together.
 
    Example:
 
