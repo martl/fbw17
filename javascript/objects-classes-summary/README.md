@@ -54,31 +54,35 @@ const car = {
 
 ### Aside I: How to solve a programming problem
 
-- Rule 1: _Never_ Assume -> To assume is to make an ass out of u and me
-- Rule 2: _Always_ Read the description of the problem
-- Rule 3: _Never_ Start with research
-- Rule 4: _Always_ Break it down to smaller problems
-- Rule 5: _Always_ test your solution. Write your tests even before you write your code
+- Rule 1: **Never** Assume -> To assume is to make an ass out of u and me
+- Rule 2: **Always** Read the description of the problem
+- Rule 3: **Never** Start with research
+- Rule 4: **Always** Break it down to smaller problems
+- Rule 5: **Always** test your solution. Write your tests even before you write your code
 
-Example: Breakdown of exercise above
+_Example_: Breakdown of exercise above
 
-**Write a function** that checks if a number is within the range of an object's min and max properties.
+**Write a function** that checks if a _number_ is within the _range_ of an object's _min_ and _max_ properties.
 
-1. ~~Write a function~~
-2. ~~The function should accept two _parameters_: `number`, and `range`~~
-3. ~~The function should return a Boolean, that indicates whether `number` is within the properties `min` and `max` of `range`~~
-   3.1. ~~Make sure that `number` is equal or bigger than `range.min`~~
-   3.2 ~~Make sure that `number` is equal or smaller than `range.max`~~
+1. Write a function
+2. The function should accept two _parameters_: `number`, and `range`
+3. The function should return a Boolean, that indicates whether `number` is within the properties `min` and `max` of `range`
+   - Make sure that `number` is equal or bigger than `range.min`
+   - Make sure that `number` is equal or smaller than `range.max`
 
 ---
 
-### Accessing keys
+### Accessing keys and values
+
+We can access values on an object literal by writing the key name with dot notation. i.e. if we have an object `car` with a `color` property we can write `car.color`
 
 3. Given an object car with a key "color", how can we access the value stored in color?
 
    0. [ ] `car[color]`
    1. [ ] `car{color}`
    1. [x] `car["color"]`
+
+Another way to access p
 
 1. All Objects are:
 
@@ -98,3 +102,13 @@ Example: Breakdown of exercise above
    | -------------------- | -------------------------------------------- |
    | { a: 1, b: 2, c: 3 } | { keys: ["a", "b", "c"], values: [1, 2, 3] } |
    | {isBrown: true}      | { keys: ["isBrown"], values: [true] }        |
+
+1. **Challenge**: _(35-40 mins.)_ Write a function that takes in an array of scrabble tiles, and returns the total score of the tiles together.
+
+   Example:
+
+   | Input                                                                                                                                                                             | Output |
+   | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+   | [{ tile: "N", score: 1 }, {tile: "O", score: 1 }]                                                                                                                                 | 2      |
+   | [{ tile: "Y", score: 4 }, {tile: "E", score: 1 }, {tile: "S", score: 1 }]                                                                                                         | 6      |
+   | [{ tile: "N", score: 1 }, { tile: "K", score: 5 }, { tile: "Z", score: 10 }, { tile: "X", score: 8 }, { tile: "D", score: 2 }, { tile: "A", score: 1 }, { tile: "E", score: 1 } ] | 28     |
