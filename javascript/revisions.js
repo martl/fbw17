@@ -282,11 +282,11 @@ const ageInfo = classMates.reduce(
 
 console.log(ageInfo);
 
-// We can also reduce an array, into another array: Filtering an array of student
-// const studentsBeginWithM = classMates.reduce((filtered, student) => {
-//   if (student.firstName[0].toLocaleUpperCase() === "M") {
-//     filtered.push(student);
-//   }
+// We can also reduce an array, into another array: Filtering an array of students
+const studentsBeginWithM = classMates.reduce((filtered, student) => {
+  if (student.firstName[0].toLocaleUpperCase() === "M") {
+    filtered.push(student);
+  }
 
 //   return filtered;
 // }, []);
@@ -302,3 +302,6 @@ console.log(studentsStartsWithM);
 // Shorter version:
 const studentsStartingWithM = classMates.filter(student => student.firstName[0].toUpperCase() === "M");
 console.log(studentsStartingWithM);
+const studentsBeginWithM = classMates.filter(student => {
+  return student.firstName[0].toUpperCase() === "M";
+});
