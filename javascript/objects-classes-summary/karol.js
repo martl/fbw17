@@ -59,3 +59,33 @@ const person = {
     return `${this.firstName} says ${this.greeting}`;
   }
 };
+
+const counter = {
+  currentValue: 0,
+  increment: function() {
+    this.currentValue++;
+    return this.currentValue;
+  },
+  decrement: function() {
+    this.currentValue--;
+    return this.currentValue;
+  },
+  add: function(number) {
+    this.currentValue += number;
+    return this.currentValue;
+  },
+  subtract: function(number) {
+    this.currentValue -= number;
+    return this.currentValue;
+  }
+};
+
+console.log(counter.currentValue);
+counter.increment();
+console.log(counter.currentValue);
+counter.decrement();
+console.log(counter.currentValue);
+counter.add(10);
+console.log(counter.currentValue);
+counter.subtract(5);
+console.log(counter.currentValue);
