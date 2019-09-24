@@ -48,8 +48,8 @@ let checkNum = (input, range) => {
     // console.log(scrabbleScore);
     
     function scrabbleScore(obj) {
-        arr.reduce(function(total, curr){
-            return total + curr.score};
+        obj.reduce(function(total, curr){
+            return total + curr.score}
          
         ),0};
     
