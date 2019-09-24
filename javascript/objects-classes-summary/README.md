@@ -159,7 +159,7 @@ Sometimes, converting all the keys or all the values of an object into an array 
    - lastName (the last name of the person)
    - sayHello (a method that returns the string "Hello World")
 
-1) In the following object, what will the method `person.sayHello()` return?
+1. In the following object, what will the method `person.sayHello()` return?
 
    ```javascript
    const person = {
@@ -196,13 +196,13 @@ Sometimes, converting all the keys or all the values of an object into an array 
 
 1. **Exercise** _(15 mins.)_: Fix the existing following object and add a method `changeName()`. The method should accept a string as an argument and change the `firstName` property to that new string.
 
-```javascript
-const person = {
-  firstName: "Ali",
-  lastName: "Abu Zrir",
-  greeting: "salam",
-  sayHello: () => {
-    return `${this.firstName} says ${this.greeting}`;
-  }
-};
-```
+   ```javascript
+   const person = {
+     firstName: "Ali",
+     lastName: "Abu Zrir",
+     greeting: "salam",
+     sayHello: () => {
+       return `${this.firstName} says ${this.greeting}`;
+     }
+   };
+   ```
