@@ -221,3 +221,61 @@ Sometimes, converting all the keys or all the values of an object into an array 
    - decrement (a method to decrease the property of `currentValue` by 1)
    - add (a method that accepts a number and adds it to `currentValue`)
    - subtract (a method that accepts a number and subtracts it from `currentValue`)
+
+## Part 3: Classes and Extends
+
+0. An object can also be called:
+
+   0. [ ] An Array
+   1. [ ] A method
+   1. [x] An instance
+   1. [ ] A property
+
+1. To create an instance we can use the following keyword:
+
+   0. [x] new
+   1. [ ] class
+   1. [ ] function
+
+1. **Exercise** _(15 mins.)_ : Create a function that returns the current date and time in the following string format: "Today is Wednesday. The current time is 13:34:59"
+
+1. **Bonus** _(20 mins.)_: Create a function that takes in a month number and a year and calculates the number of days in that month.
+
+   | Inputs   | Output |
+   | -------- | ------ |
+   | 1, 2019  | 31     |
+   | 2, 2020  | 29     |
+   | 9, 2013  | 30     |
+   | 12, 2019 | 31     |
+
+1. To define the structure of an object, and create several objects with the same set of keys, we can use:
+
+   0. [ ] An array
+   1. [x] A class
+   1. [ ] An instance
+
+1. Order the following lines to create a class Vehicle:
+
+   0. this.wheels = wheels
+   1. this.brand = brand
+   1. }
+   1. class Vehicle {
+   1. this.color = color
+   1. constructor(brand, color, wheels){
+   1. }
+
+   ```javascript
+   class Vehicle {
+     constructor(brand, color, wheels) {
+       this.brand = brand;
+       this.color = color;
+       this.wheels = wheels;
+     }
+   }
+   ```
+
+1. **Exercise** _(15 mins.)_: Create a class person which generates objects with the following properties:
+
+   - firstName: the first name of a person
+   - lastName: the last name of a person
+   - age: the age of the person

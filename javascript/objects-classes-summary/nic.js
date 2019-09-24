@@ -95,3 +95,39 @@ console.log(person.sayHello()); // -> Prints: 'Ali says salam'
 console.log(person.firstName); // -> Prints: Ali
 console.log(person.changeName("Nic")); // -> Prints: Nic
 console.log(person.firstName); // -> Prints: Nic
+
+/*
+1. **Challange**: _(30 mins.)_ Create a counter object with the following properties and methods:
+   - currentValue (the number 0)
+   - increment (a method to increase the property `currentValue` by 1)
+   - decrement (a method to decrease the property of `currentValue` by 1)
+   - add (a method that accepts a number and adds it to `currentValue`)
+   - subtract (a method that accepts a number and subtracts it from `currentValue`)
+
+*/
+
+const counter = {
+  currentValue: 0,
+  increment: function() {
+    this.currentValue++;
+    return this.currentValue;
+  },
+  decrement: function() {
+    this.currentValue--;
+    return this.currentValue;
+  },
+  add: function(number) {
+    this.currentValue += number;
+    return this.currentValue;
+  },
+  subtract: function(number) {
+    this.currentValue -= number;
+    return this.currentValue;
+  }
+};
+
+console.log(counter.increment());
+console.log(counter.decrement());
+console.log(counter.add(7));
+console.log(counter.currentValue); // Just to see where currentValue is now
+console.log(counter.subtract(50));
