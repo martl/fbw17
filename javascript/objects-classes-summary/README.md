@@ -279,3 +279,59 @@ Sometimes, converting all the keys or all the values of an object into an array 
    - firstName: the first name of a person
    - lastName: the last name of a person
    - age: the age of the person
+
+1. **Bonus** _(10 mins)_: Use the class from the exercise above, to create an array of your class mates.
+
+1. Order the following lines to create a class NoisyBastard with the method makeNoise:
+
+   1. }
+   1. this.sound = sound
+   1. }
+   1. constructor(sound){
+   1. class NoisyBastard {
+   1. }
+   1. console.log(this.sound)
+   1. makeNoise(){
+
+   ```javascript
+   class NoisyBastard {
+     constructor(sound) {
+       this.sound = sound;
+     }
+
+     makeNoise() {
+       console.log(this.sound);
+     }
+   }
+   ```
+
+1. A class can be based on another class by using the following keyword:
+
+   0. [ ] new
+   1. [ ] class
+   1. [x] extends
+
+1. Order the following lines to create a class Cat based on Pet:
+
+   0. this.breed = breed
+   1. }
+   1. super(name, age)
+   1. constructor(name, breed, age){
+   1. class Cat extends Pet {
+   1. }
+
+   ```javascript
+   class Cat extends Pet {
+     constructor(name, breed, age) {
+       super(name, age);
+       this.breed = breed;
+     }
+   }
+   ```
+
+1. **Exercise** _(15 mins.)_: Create a class DciStudent which extends a person and adds the following properties to it:
+
+   - courseNumber: That persons course number. i.e. FbW17
+   - experiencePoints: That student's edabit XP
+
+1. **Exercise** _(10 mins)_: Use the class from the exercise above, to create or update your array of your class mates.
