@@ -109,11 +109,11 @@ console.log(person.firstName); // -> Prints: Nic
 const counter = {
   currentValue: 0,
   increment: function() {
-    this.currentValue += 1;
+    this.currentValue++;
     return this.currentValue;
   },
   decrement: function() {
-    this.currentValue -= 1;
+    this.currentValue--;
     return this.currentValue;
   },
   add: function(number) {
@@ -128,6 +128,6 @@ const counter = {
 
 console.log(counter.increment());
 console.log(counter.decrement());
-console.log(counter.add(5));
+console.log(counter.add(7));
 console.log(counter.currentValue); // Just to see where currentValue is now
-console.log(counter.subtract(5));
+console.log(counter.subtract(50));
