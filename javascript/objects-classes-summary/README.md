@@ -118,3 +118,43 @@ Sometimes, converting all the keys or all the values of an object into an array 
    | [{ tile: "N", score: 1 }, {tile: "O", score: 1 }]                                                                                                                                 | 2      |
    | [{ tile: "Y", score: 4 }, {tile: "E", score: 1 }, {tile: "S", score: 1 }]                                                                                                         | 6      |
    | [{ tile: "N", score: 1 }, { tile: "K", score: 5 }, { tile: "Z", score: 10 }, { tile: "X", score: 8 }, { tile: "D", score: 2 }, { tile: "A", score: 1 }, { tile: "E", score: 1 } ] | 28     |
+
+## Properties and Methods
+
+0. Keys that store function values are called:
+
+   0. [x] methods
+   1. [ ] objects
+   1. [ ] properties
+
+1. Keys that store non function values are called:
+
+   0. [ ] methods
+   1. [ ] objects
+   1. [x] properties
+
+1. To call a method sayHello on a person object we can write:
+
+   0. [ ] person(sayHello)
+   1. [ ] person[sayHello]
+   1. [x] person.sayHello()
+
+1. Order the following lines to create a car object with the method accelerate:
+
+   0. }
+   1. accelerate: () => {return "Vroom" }
+   1. const car = {
+
+   ```javascript
+   const car = {
+     accelerate: () => {
+       return "Vroom";
+     }
+   };
+   ```
+
+1. **Exercise**: _(5 mins.)_ Create a person object with the following properties and methods:
+
+   - firstName (the first name of the person)
+   - lastName (the last name of the person)
+   - sayHello (a method that returns the string "Hello World")
