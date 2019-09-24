@@ -1,5 +1,6 @@
 let ion = {
     firstName: "Ion",
     lastName:"Lazarev",
-    sayHello:"Hello World"
+    sayHello:()=> {return"Hello World"}
 }
+
