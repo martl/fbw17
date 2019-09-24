@@ -14,14 +14,24 @@
          return this.currentValue-=1;
      },
      add : function(number){
-         return this.currentValue - number;
+         return this.currentValue += number;
      },
      sub : function(number){
-         return this.currentValue + number;
+         return this.currentValue -= number;
      }
 
  }
  console.log (counter.increment())
 console.log(counter.decrement())
 console.log(counter.add(2))
-console.log(counter.increment(4))
+console.log(counter.sub(4))
+
+class Person{
+    constructor(firstName, lastName, age){
+        this.firstName = firstName;
+        this.lastName= lastName;
+        this.age= age;
+
+    }
+}
+console.log("dd", "ss" , 12)
