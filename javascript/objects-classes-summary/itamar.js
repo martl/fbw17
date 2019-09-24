@@ -76,21 +76,60 @@ const countScrabbleScore = scrabbleTiles => {
 
 // Fix the existing following object and add a method changeName(). The method should accept a string as an argument and change the firstName property to that new string.
 
-const person = {
-  firstName: "Ali",
-  lastName: "Abu Zrir",
-  greeting: "salam",
-  sayHello: function() {
-    return `${this.firstName} says ${this.greeting}`;
+// const person = {
+//   firstName: "Ali",
+//   lastName: "Abu Zrir",
+//   greeting: "salam",
+//   sayHello: function() {
+//     return `${this.firstName} says ${this.greeting}`;
+//   },
+//   changeName: function(newName) {
+//     this.firstName = newName;
+//     return this.firstName;
+//   }
+// };
+
+// // console.log(person.sayHello());
+
+// console.log("Before rename:", person.firstName);
+// console.log("Rename action:", person.changeName("Dana"));
+// console.log("After rename:", person.firstName);
+
+/**
+ * Create a counter object with the following properties and methods:
+      currentValue (the number 0)
+      increment (a method to increase the property currentValue by 1)
+      decrement (a method to decrease the property of currentValue by 1)
+      add (a method that accepts a number and adds it to currentValue)
+      subtract (a method that accepts a number and subtracts it from currentValue)
+ */
+
+const counter = {
+  currentValue: 0,
+  increment: function() {
+    this.currentValue++;
+    return this.currentValue;
   },
-  changeName: function(newName) {
-    this.firstName = newName;
-    return this.firstName;
+  decrement: function() {
+    this.currentValue--;
+    return this.currentValue;
+  },
+  add(num) {
+    this.currentValue += num;
+    return this.currentValue;
+  },
+  subtract(num) {
+    this.currentValue -= num;
+    return this.currentValue;
   }
 };
 
-// console.log(person.sayHello());
-
-console.log("Before rename:", person.firstName);
-console.log("Rename action:", person.changeName("Dana"));
-console.log("After rename:", person.firstName);
+console.log(counter.currentValue); // -> 0
+console.log(counter.increment()); // -> 1
+console.log(counter.currentValue); // -> 1
+console.log(counter.decrement()); // -> 0
+console.log(counter.currentValue); // -> 0
+console.log(counter.add(6)); // -> 6
+console.log(counter.currentValue); // -> 6
+console.log(counter.subtract(8)); // -> -2
+console.log(counter.currentValue); // -> -2
