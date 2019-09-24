@@ -39,3 +39,16 @@
    console.log(counterObject.add(7));
    console.log(counterObject.currentValue);
    console.log(counterObject.substract(6))
+
+
+
+   class person {
+     constructor(firstName = 'Emma', lastName = 'Peel', age = 34){
+       this.firstName = firstName;
+       this.lastName = lastName;
+       this.age = age;
+     }
+   };
+
+   const persona= new person ('Naima', 'Adan Ahmed', '29');
+   console.log(persona)
