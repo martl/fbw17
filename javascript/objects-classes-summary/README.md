@@ -158,3 +158,51 @@ Sometimes, converting all the keys or all the values of an object into an array 
    - firstName (the first name of the person)
    - lastName (the last name of the person)
    - sayHello (a method that returns the string "Hello World")
+
+1) In the following object, what will the method `person.sayHello()` return?
+
+   ```javascript
+   const person = {
+     firstName: "Ali",
+     lastName: "Abu Zrir",
+     greeting: "salam",
+     sayHello: () => {
+       return `${this.firstName} says ${this.greeting}`;
+     }
+   };
+   ```
+
+   0. [ ] "salam"
+   1. [ ] "Ali"
+   1. [ ] "Ali says salam"
+   1. [ ] "this.firstName says salam"
+
+   In the question above, **none** of the answers are correct. The reason is that arrow functions, **_do not_** include `this` in their scope. Usually, `this` refers to the current object on which the _method_ is defined. In order to make method work with `this`, we introduce a new rule:
+
+   **Always** use function expression within methods.
+
+   The correct code will look like the following:
+
+   ```javascript
+   const person = {
+     firstName: "Ali",
+     lastName: "Abu Zrir",
+     greeting: "salam",
+     sayHello: function() {
+       return `${this.firstName} says ${this.greeting}`;
+     }
+   };
+   ```
+
+1. **Exercise** _(15 mins.)_: Fix the existing following object and add a method `changeName()`. The method should accept a string as an argument and change the `firstName` property to that new string.
+
+```javascript
+const person = {
+  firstName: "Ali",
+  lastName: "Abu Zrir",
+  greeting: "salam",
+  sayHello: () => {
+    return `${this.firstName} says ${this.greeting}`;
+  }
+};
+```
