@@ -89,3 +89,16 @@ counter.add(10);
 console.log(counter.currentValue);
 counter.subtract(5);
 console.log(counter.currentValue);
+
+class Person {
+  constructor(params = {}) {
+    this.firstName = params["firstName"] || "Angela";
+    this.lastName = params["lastName"] || "Trump";
+    this.age = params["age"] || 90;
+  }
+}
+
+let karol = new Person();
+console.log(karol);
+let donald = new Person({ firstName: "Donald", age: 65 });
+console.log(donald);

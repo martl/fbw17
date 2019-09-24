@@ -131,3 +131,23 @@ console.log(counter.decrement());
 console.log(counter.add(7));
 console.log(counter.currentValue); // Just to see where currentValue is now
 console.log(counter.subtract(50));
+
+
+// 1. ** Exercise ** _(15 mins.)_: Create a class person which generates objects with the following properties:
+
+// - firstName: the first name of a person
+// - lastName: the last name of a person
+//         - age: the age of the person
+
+class personConstructor {
+    constructor(firstName = "Trevor", lastName = "Hall", age = 32) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+};
+const firstPerson = new personConstructor("Nic", "Solitom", 78);
+console.log(firstPerson);
+
+const secondPerson = new personConstructor();
+console.log(secondPerson);
