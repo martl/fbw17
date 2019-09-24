@@ -119,7 +119,7 @@ Sometimes, converting all the keys or all the values of an object into an array 
    | [{ tile: "Y", score: 4 }, {tile: "E", score: 1 }, {tile: "S", score: 1 }]                                                                                                         | 6      |
    | [{ tile: "N", score: 1 }, { tile: "K", score: 5 }, { tile: "Z", score: 10 }, { tile: "X", score: 8 }, { tile: "D", score: 2 }, { tile: "A", score: 1 }, { tile: "E", score: 1 } ] | 28     |
 
-## Properties and Methods
+## Part 2: Properties and Methods
 
 0. Keys that store function values are called:
 
@@ -206,3 +206,18 @@ Sometimes, converting all the keys or all the values of an object into an array 
      }
    };
    ```
+
+---
+
+### Aside II: First definition of state
+
+**State** is the value of an object's properties at any given point in time.
+
+---
+
+1. **Challange**: _(30 mins.)_ Create a counter object with the following properties and methods:
+   - currentValue (the number 0)
+   - increment (a method to increase the property `currentValue` by 1)
+   - decrement (a method to decrease the property of `currentValue` by 1)
+   - add (a method that accepts a number and adds it to `currentValue`)
+   - subtract (a method that accepts a number and subtracts it from `currentValue`)

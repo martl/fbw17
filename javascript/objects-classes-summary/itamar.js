@@ -41,27 +41,40 @@ const countScrabbleScore = scrabbleTiles => {
   }, 0);
 };
 
-console.log(
-  countScrabbleScore([{ tile: "N", score: 1 }, { tile: "O", score: 1 }])
-); // -> 2
-console.log(
-  countScrabbleScore([
-    { tile: "Y", score: 4 },
-    { tile: "E", score: 1 },
-    { tile: "S", score: 1 }
-  ])
-); // -> 6
-console.log(
-  countScrabbleScore([
-    { tile: "N", score: 1 },
-    { tile: "K", score: 5 },
-    { tile: "Z", score: 10 },
-    { tile: "X", score: 8 },
-    { tile: "D", score: 2 },
-    { tile: "A", score: 1 },
-    { tile: "E", score: 1 }
-  ])
-); // -> 28
+// console.log(
+//   countScrabbleScore([{ tile: "N", score: 1 }, { tile: "O", score: 1 }])
+// ); // -> 2
+// console.log(
+//   countScrabbleScore([
+//     { tile: "Y", score: 4 },
+//     { tile: "E", score: 1 },
+//     { tile: "S", score: 1 }
+//   ])
+// ); // -> 6
+// console.log(
+//   countScrabbleScore([
+//     { tile: "N", score: 1 },
+//     { tile: "K", score: 5 },
+//     { tile: "Z", score: 10 },
+//     { tile: "X", score: 8 },
+//     { tile: "D", score: 2 },
+//     { tile: "A", score: 1 },
+//     { tile: "E", score: 1 }
+//   ])
+// ); // -> 28
+
+// const person = {
+//   firstName: "Ali",
+//   lastName: "Abu Zrir",
+//   greeting: "salam",
+//   sayHello: function() {
+//     return `${this.firstName} says ${this.greeting}`;
+//   }
+// };
+
+// console.log(person.sayHello());
+
+// Fix the existing following object and add a method changeName(). The method should accept a string as an argument and change the firstName property to that new string.
 
 const person = {
   firstName: "Ali",
@@ -69,7 +82,15 @@ const person = {
   greeting: "salam",
   sayHello: function() {
     return `${this.firstName} says ${this.greeting}`;
+  },
+  changeName: function(newName) {
+    this.firstName = newName;
+    return this.firstName;
   }
 };
 
-console.log(person.sayHello());
+// console.log(person.sayHello());
+
+console.log("Before rename:", person.firstName);
+console.log("Rename action:", person.changeName("Dana"));
+console.log("After rename:", person.firstName);
