@@ -43,3 +43,17 @@
 // console.log(counter.subtract(4));
 
 
+
+
+class Person {
+    constructor(firstName = 'a', lastName = 'b', age = 0) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+}
+
+const person1 = new Person('c', 'd', 1);
+console.log(person1);
+const person2 = new Person();
+console.log(person2);
