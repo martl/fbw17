@@ -109,7 +109,7 @@ Sometimes, converting all the keys or all the values of an object into an array 
    | { a: 1, b: 2, c: 3 } | { keys: ["a", "b", "c"], values: [1, 2, 3] } |
    | {isBrown: true}      | { keys: ["isBrown"], values: [true] }        |
 
-8. **Challenge**: _(35-40 mins.)_ Write a function that takes in an array of scrabble tiles, and returns the total score of the tiles together.
+8. **Challenge**: _(20 mins.)_ Write a function that takes in an array of scrabble tiles, and returns the total score of the tiles together.
 
    Example:
 
