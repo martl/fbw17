@@ -52,6 +52,8 @@ const car = {
 
    _Note: Assume min <= max is always true._
 
+---
+
 ### Aside I: How to solve a programming problem
 
 - Rule 1: **Never** Assume -> To assume is to make an ass out of u and me
@@ -107,7 +109,7 @@ Sometimes, converting all the keys or all the values of an object into an array 
    | { a: 1, b: 2, c: 3 } | { keys: ["a", "b", "c"], values: [1, 2, 3] } |
    | {isBrown: true}      | { keys: ["isBrown"], values: [true] }        |
 
-8. **Challenge**: _(35-40 mins.)_ Write a function that takes in an array of scrabble tiles, and returns the total score of the tiles together.
+8. **Challenge**: _(20 mins.)_ Write a function that takes in an array of scrabble tiles, and returns the total score of the tiles together.
 
    Example:
 
@@ -116,3 +118,220 @@ Sometimes, converting all the keys or all the values of an object into an array 
    | [{ tile: "N", score: 1 }, {tile: "O", score: 1 }]                                                                                                                                 | 2      |
    | [{ tile: "Y", score: 4 }, {tile: "E", score: 1 }, {tile: "S", score: 1 }]                                                                                                         | 6      |
    | [{ tile: "N", score: 1 }, { tile: "K", score: 5 }, { tile: "Z", score: 10 }, { tile: "X", score: 8 }, { tile: "D", score: 2 }, { tile: "A", score: 1 }, { tile: "E", score: 1 } ] | 28     |
+
+## Part 2: Properties and Methods
+
+0. Keys that store function values are called:
+
+   0. [x] methods
+   1. [ ] objects
+   1. [ ] properties
+
+1. Keys that store non function values are called:
+
+   0. [ ] methods
+   1. [ ] objects
+   1. [x] properties
+
+1. To call a method sayHello on a person object we can write:
+
+   0. [ ] person(sayHello)
+   1. [ ] person[sayHello]
+   1. [x] person.sayHello()
+
+1. Order the following lines to create a car object with the method accelerate:
+
+   0. }
+   1. accelerate: () => {return "Vroom" }
+   1. const car = {
+
+   ```javascript
+   const car = {
+     accelerate: () => {
+       return "Vroom";
+     }
+   };
+   ```
+
+1. **Exercise**: _(5 mins.)_ Create a person object with the following properties and methods:
+
+   - firstName (the first name of the person)
+   - lastName (the last name of the person)
+   - sayHello (a method that returns the string "Hello World")
+
+1. In the following object, what will the method `person.sayHello()` return?
+
+   ```javascript
+   const person = {
+     firstName: "Ali",
+     lastName: "Abu Zrir",
+     greeting: "salam",
+     sayHello: () => {
+       return `${this.firstName} says ${this.greeting}`;
+     }
+   };
+   ```
+
+   0. [ ] "salam"
+   1. [ ] "Ali"
+   1. [ ] "Ali says salam"
+   1. [ ] "this.firstName says salam"
+
+   In the question above, **none** of the answers are correct. The reason is that arrow functions, **_do not_** include `this` in their scope. Usually, `this` refers to the current object on which the _method_ is defined. In order to make method work with `this`, we introduce a new rule:
+
+   **Always** use function expression within methods.
+
+   The correct code will look like the following:
+
+   ```javascript
+   const person = {
+     firstName: "Ali",
+     lastName: "Abu Zrir",
+     greeting: "salam",
+     sayHello: function() {
+       return `${this.firstName} says ${this.greeting}`;
+     }
+   };
+   ```
+
+1. **Exercise** _(15 mins.)_: Fix the existing following object and add a method `changeName()`. The method should accept a string as an argument and change the `firstName` property to that new string.
+
+   ```javascript
+   const person = {
+     firstName: "Ali",
+     lastName: "Abu Zrir",
+     greeting: "salam",
+     sayHello: () => {
+       return `${this.firstName} says ${this.greeting}`;
+     }
+   };
+   ```
+
+---
+
+### Aside II: First definition of state
+
+**State** is the value of an object's properties at any given point in time.
+
+---
+
+1. **Challange**: _(30 mins.)_ Create a counter object with the following properties and methods:
+   - currentValue (the number 0)
+   - increment (a method to increase the property `currentValue` by 1)
+   - decrement (a method to decrease the property of `currentValue` by 1)
+   - add (a method that accepts a number and adds it to `currentValue`)
+   - subtract (a method that accepts a number and subtracts it from `currentValue`)
+
+## Part 3: Classes and Extends
+
+0. An object can also be called:
+
+   0. [ ] An Array
+   1. [ ] A method
+   1. [x] An instance
+   1. [ ] A property
+
+1. To create an instance we can use the following keyword:
+
+   0. [x] new
+   1. [ ] class
+   1. [ ] function
+
+1. **Exercise** _(15 mins.)_ : Create a function that returns the current date and time in the following string format: "Today is Wednesday. The current time is 13:34:59"
+
+1. **Bonus** _(20 mins.)_: Create a function that takes in a month number and a year and calculates the number of days in that month.
+
+   | Inputs   | Output |
+   | -------- | ------ |
+   | 1, 2019  | 31     |
+   | 2, 2020  | 29     |
+   | 9, 2013  | 30     |
+   | 12, 2019 | 31     |
+
+1. To define the structure of an object, and create several objects with the same set of keys, we can use:
+
+   0. [ ] An array
+   1. [x] A class
+   1. [ ] An instance
+
+1. Order the following lines to create a class Vehicle:
+
+   0. this.wheels = wheels
+   1. this.brand = brand
+   1. }
+   1. class Vehicle {
+   1. this.color = color
+   1. constructor(brand, color, wheels){
+   1. }
+
+   ```javascript
+   class Vehicle {
+     constructor(brand, color, wheels) {
+       this.brand = brand;
+       this.color = color;
+       this.wheels = wheels;
+     }
+   }
+   ```
+
+1. **Exercise** _(15 mins.)_: Create a class person which generates objects with the following properties:
+
+   - firstName: the first name of a person
+   - lastName: the last name of a person
+   - age: the age of the person
+
+1. **Bonus** _(10 mins)_: Use the class from the exercise above, to create an array of your class mates.
+
+1. Order the following lines to create a class NoisyBastard with the method makeNoise:
+
+   1. }
+   1. this.sound = sound
+   1. }
+   1. constructor(sound){
+   1. class NoisyBastard {
+   1. }
+   1. console.log(this.sound)
+   1. makeNoise(){
+
+   ```javascript
+   class NoisyBastard {
+     constructor(sound) {
+       this.sound = sound;
+     }
+
+     makeNoise() {
+       console.log(this.sound);
+     }
+   }
+   ```
+
+1. A class can be based on another class by using the following keyword:
+
+   0. [ ] new
+   1. [ ] class
+   1. [x] extends
+
+1. Order the following lines to create a class Cat based on Pet:
+
+   0. this.breed = breed
+   1. }
+   1. super(name, age)
+   1. constructor(name, breed, age){
+   1. class Cat extends Pet {
+   1. }
+
+   ```javascript
+   class Cat extends Pet {
+     constructor(name, breed, age) {
+       super(name, age);
+       this.breed = breed;
+     }
+   }
+   ```
+
+1. **Exercise** _(15 mins.)_: Create a class DciStudent which extends a person and adds the following properties to it:
+
+   - courseNumber: That persons course number. i.e. FbW17
+   - experiencePoints: That student's edabit XP
+
+1. **Exercise** _(10 mins)_: Use the class from the exercise above, to create or update your array of your class mates.
