@@ -1,14 +1,10 @@
-const helmet = {
-    size: 'M',
-    price: 17,
-    color: 'grey',
-    lock: () => {
-        return 'The helmet is locked';
-    },
-    unlock: () => {
-        return 'The helmet is unlocked';
+const person = {
+    firstName: "Ali",
+    lastName: "Abu Zrir",
+    greeting: "salam",
+    sayHello: function() {
+        return `${this.firstName} says ${this.greeting}`;
     }
-}
+};
 
-console.log(helmet.lock())
-console.log(helmet.price);
+console.log(person.sayHello());
