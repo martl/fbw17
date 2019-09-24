@@ -238,3 +238,5 @@ function inRange(number, range) {
   return number <= range.max && number >= range.min;
 }
 console.log(inRange(4, { min: 0, max: 5 }));
+
+console.log(Number("2"));
